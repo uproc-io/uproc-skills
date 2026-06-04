@@ -1,0 +1,175 @@
+# Skills User Manual
+
+This manual explains what each skill in `skills/` is for, when to use it, and which worker profile it serves.
+
+## How To Use This Catalog
+
+- Start from the worker profile folder.
+- Pick the skill whose task name best matches the job to be done.
+- Open the `SKILL.md` file inside that folder.
+- Follow the `Implementation via Bizzmod MCP` section to execute the task with the correct MCP tools.
+- Prefer the concrete MCP tools named in the skill before falling back to generic helpers such as `module.actions` or `module.action`.
+
+## Profiles
+
+### Administration
+
+#### `administration/review-incoming-documents`
+
+- Use for: reviewing newly received business documents.
+- Typical outcome: a quick intake summary, exceptions, and next routing decision.
+
+#### `administration/validate-received-invoices`
+
+- Use for: checking invoice intake quality before downstream finance processing.
+- Typical outcome: validation summary, capture issues, and recommended fixes.
+
+#### `administration/manage-pending-approvals`
+
+- Use for: reviewing the approval queue and deciding whether to approve, reject, or reassign requests.
+- Typical outcome: prioritized approval summary and action-ready decision list.
+
+### Finance
+
+#### `finance/review-invoices-and-capture`
+
+- Use for: reviewing received invoices and their extraction/capture state.
+- Typical outcome: invoice intake summary and list of records needing manual review.
+
+#### `finance/reconcile-transactions`
+
+- Use for: reconciling entries, extracts, and matches.
+- Typical outcome: reconciliation summary, mismatch list, and next finance actions.
+
+#### `finance/track-payments-and-overdues`
+
+- Use for: monitoring collections, reminders, and unpaid invoices.
+- Typical outcome: overdue list and recommended follow-up actions.
+
+#### `finance/prepare-tax-reporting`
+
+- Use for: reviewing tax reporting readiness and reporting outputs.
+- Typical outcome: reporting summary, missing pieces, filing preparation notes, and action-ready next steps such as generate, recalculate, validate, or export.
+
+### Support
+
+#### `support/manage-incidents`
+
+- Use for: triaging support queues, customer-care tickets, and related cases.
+- Typical outcome: queue summary, priorities, and next handling actions.
+
+#### `support/draft-customer-replies`
+
+- Use for: preparing customer-facing responses from prior email context.
+- Typical outcome: a structured draft reply or response outline.
+
+#### `support/track-orders-and-report-issues`
+
+- Use for: monitoring tracked orders and preparing issue communication.
+- Typical outcome: order status summary, exception list, and draft customer update.
+
+### Sales
+
+#### `sales/create-and-qualify-leads`
+
+- Use for: creating leads, checking qualification, and reviewing lead records.
+- Typical outcome: qualified lead list and recommended follow-up steps.
+
+#### `sales/prepare-sales-proposal`
+
+- Use for: creating a proposal draft for an existing lead.
+- Typical outcome: proposal summary and generated proposal workflow.
+
+#### `sales/send-proposal-and-follow-up`
+
+- Use for: sending proposals and tracking next steps after delivery.
+- Typical outcome: sent proposal action and follow-up reminder plan.
+
+#### `sales/review-prospecting-and-prioritize`
+
+- Use for: reviewing prospecting output and deciding what should enter lead management.
+- Typical outcome: prioritized opportunities and recommended actions.
+
+### Operations
+
+#### `operations/review-incoming-orders`
+
+- Use for: checking newly ingested or tracked orders and deciding follow-up.
+- Typical outcome: order intake summary, exceptions, and next operational action.
+
+#### `operations/coordinate-stock-and-demand`
+
+- Use for: reviewing inventory planning pressure and receipt status.
+- Typical outcome: stock-risk summary and suggested coordination actions.
+
+#### `operations/monitor-processes`
+
+- Use for: reviewing operational process visibility and detecting blocked flows.
+- Typical outcome: process status summary and escalation list.
+
+### Legal
+
+#### `legal/review-active-and-expiring-contracts`
+
+- Use for: reviewing contract status, counterparties, and expiring agreements.
+- Typical outcome: active/expiring contract summary and contract action list.
+
+#### `legal/prepare-document-signing`
+
+- Use for: preparing signature requests and following signing progress.
+- Typical outcome: signing summary and required next signature step.
+
+### HR
+
+#### `hr/review-candidates`
+
+- Use for: reviewing openings, candidates, applications, evaluations, and stage movement.
+- Typical outcome: pipeline summary, shortlist, and recommended candidate actions.
+
+#### `hr/track-hiring-process`
+
+- Use for: monitoring hiring progress and identifying stalled applications or missing evaluations.
+- Typical outcome: progress summary, blocked candidates, and optional communication draft.
+
+### Marketing
+
+#### `marketing/prepare-campaigns-and-audiences`
+
+- Use for: reviewing campaigns, defining audiences, and preparing campaign execution.
+- Typical outcome: campaign readiness summary, audience action plan, and a clear decision on whether to pause or activate a campaign.
+
+#### `marketing/manage-editorial-content`
+
+- Use for: reviewing editorial opportunities, projects, and article pipelines.
+- Typical outcome: editorial backlog summary and next publishing actions.
+
+### Leadership
+
+#### `leadership/review-kpis-and-executive-summary`
+
+- Use for: obtaining executive KPI snapshots across modules.
+- Typical outcome: concise summary of the most relevant business signals and metrics.
+
+#### `leadership/ask-data-questions`
+
+- Use for: asking natural-language business questions to the data chatbot.
+- Typical outcome: answer summary plus any recommended follow-up query.
+
+### Data Operations
+
+#### `data-operations/load-and-sync-data`
+
+- Use for: reviewing sync health, imports, workflows, and form publishing readiness.
+- Typical outcome: pipeline health summary and recommended corrective actions.
+
+#### `data-operations/review-signals-and-activations`
+
+- Use for: reviewing business signals, activations, and execution trends.
+- Typical outcome: signal summary and activation follow-up list.
+
+## Notes
+
+- Skills are worker-facing. They describe business tasks, not raw module architecture.
+- Concrete MCP tools should be preferred when the skill lists them.
+- Generic tools such as `module.actions` and `module.action` are fallback options for advanced workflows.
+- Recent concrete additions include campaign pause/activate flows and tax reporting generate/recalculate/validate/export flows, so the related skills now support direct action execution instead of review-only guidance.

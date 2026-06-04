@@ -1,0 +1,63 @@
+# Load And Sync Data
+
+## Profile
+
+Advanced operations and data staff.
+
+## Goal
+
+Review synchronization and enrichment activity and prepare the next operational step.
+
+## Modules
+
+- `data-sync`
+- `data-enrichment`
+- `data-management`
+- `form-generator`
+
+## Backend capabilities
+
+- Read `runs`, `workflows`, `records`, `executions`, and `runs`.
+- Upload and webhook support.
+- `data-management` and `form-generator` need careful handling because their generic collection exposure is not as complete as other modules.
+
+## Use this skill when
+
+- You need to review data pipeline status.
+- You want to detect failing syncs or ingestion bottlenecks.
+
+## What it should do
+
+- Review recent runs and executions.
+- Highlight failing or stale workflows.
+- Separate what can be retried directly from what needs manual investigation.
+
+## Implementation via Bizzmod MCP
+
+- Use:
+  - `data-sync.runs.list`
+  - `data-sync.workflows.list`
+  - `data-sync.records.list`
+  - `data-enrichment.executions.list`
+  - `data-enrichment.runs.list`
+- Use `data-sync.run_workflow` when the worker wants to execute a workflow immediately.
+- Use `data-sync.preview_workflow` before running a workflow if the worker wants a low-risk sample of the records that would be processed.
+- Use `data-sync.dry_run_workflow` when the worker wants a rehearsal without publishing changes.
+- Use `data-management.preview_import` to validate a mapped file before ingesting it.
+- Use `data-management.enqueue_import` to queue the actual mapped import.
+- Use `data-management.get_upload_status` or `data-management.get_latest_upload` to monitor import progress.
+- Use `data-management.list_tables`, `data-management.create_table`, and `data-management.update_table` for worker-facing table setup and maintenance.
+- Use `data-management.list_columns`, `data-management.create_column`, `data-management.update_column`, and `data-management.reorder_columns` for column-level schema maintenance.
+- Use `module.kpis` for `data-sync` or `data-enrichment` when the worker wants an overview first.
+- Use `form-generator.publish_form` when the worker finishes preparing a form and wants to make it live.
+- Use `form-generator.archive_form` when the worker needs to retire a form from active use.
+- Use `form-generator.restore_form` when the worker needs to reopen an archived form as draft.
+- Use `form-generator.mark_submission_processed` when the worker finishes handling a form submission.
+- Use `form-generator.archive_submission` when the worker needs to remove a handled submission from the active queue.
+- Treat `form-generator` as the more limited MCP surface; `data-management` now supports worker-facing import monitoring and table/column setup, but destructive deletes still require more advanced routes.
+
+## Output
+
+- Pipeline health summary.
+- Failing workflow list.
+- Suggested corrective actions.

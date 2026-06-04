@@ -25,11 +25,13 @@ Authoring rules
 - Prefer ASCII unless the file already uses non-ASCII content or the language requires it.
 - Do not include secrets, tokens, private URLs, or environment-specific credentials.
 - Avoid repo-internal assumptions unless the skill is explicitly meant for this repository.
+- Each `SKILL.md` should include an `Implementation via Bizzmod MCP` section that names the relevant MCP tools, semantic shortcuts, and known capability limits.
 
 When changing this folder
 - Update `skills/README.md` when adding, renaming, or removing skills.
 - If conventions change, update this file in the same change set.
 - Keep folder references aligned with the repo root `AGENTS.md`.
+- When backend capabilities change, update the MCP implementation section of affected skills so the documented tools stay accurate.
 
 Validation
 - Check that referenced files and directories actually exist.

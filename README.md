@@ -1,4 +1,4 @@
-# skills
+# Skills
 
 This directory contains end-user skills organized by worker profile and day-to-day task.
 
@@ -9,6 +9,7 @@ This directory contains end-user skills organized by worker profile and day-to-d
 - Module names are documented inside each skill as implementation detail.
 - Skills reflect the backend reality: most modules support reading, KPIs, uploads, and webhooks; generic create operations are currently rare.
 - In this catalog, `form-generator` is the canonical name used for forms.
+- Every `SKILL.md` should map the worker task to concrete Bizzmod MCP tools and semantic shortcuts.
 
 ## Structure
 
@@ -16,8 +17,9 @@ This directory contains end-user skills organized by worker profile and day-to-d
 skills/
   AGENTS.md
   README.md
-  administracion/
-    revisar-documentos-entrantes/
+  USER_MANUAL.md
+  administration/
+    review-incoming-documents/
       SKILL.md
 ```
 
@@ -29,72 +31,75 @@ skills/
 
 ## Catalog
 
-### administracion
+### administration
 
-- `P0` `administracion/revisar-documentos-entrantes`
-- `P0` `administracion/validar-facturas-recibidas`
-- `P1` `administracion/gestionar-aprobaciones-pendientes`
+- `P0` `administration/review-incoming-documents`
+- `P0` `administration/validate-received-invoices`
+- `P1` `administration/manage-pending-approvals`
 
-### finanzas
+### finance
 
-- `P1` `finanzas/revisar-facturas-y-captura`
-- `P0` `finanzas/conciliar-movimientos`
-- `P0` `finanzas/seguir-cobros-y-impagos`
-- `P1` `finanzas/preparar-reporting-fiscal`
+- `P1` `finance/review-invoices-and-capture`
+- `P0` `finance/reconcile-transactions`
+- `P0` `finance/track-payments-and-overdues`
+- `P1` `finance/prepare-tax-reporting`
 
-### soporte
+### support
 
-- `P0` `soporte/gestionar-incidencias`
-- `P0` `soporte/redactar-respuestas-a-clientes`
-- `P1` `soporte/seguir-pedidos-y-avisar-incidencias`
+- `P0` `support/manage-incidents`
+- `P0` `support/draft-customer-replies`
+- `P1` `support/track-orders-and-report-issues`
 
-### ventas
+### sales
 
-- `P0` `ventas/crear-y-cualificar-leads`
-- `P0` `ventas/preparar-propuesta-comercial`
-- `P1` `ventas/enviar-propuesta-y-hacer-seguimiento`
-- `P1` `ventas/revisar-prospeccion-y-priorizar`
+- `P0` `sales/create-and-qualify-leads`
+- `P0` `sales/prepare-sales-proposal`
+- `P1` `sales/send-proposal-and-follow-up`
+- `P1` `sales/review-prospecting-and-prioritize`
 
-### operaciones
+### operations
 
-- `P1` `operaciones/revisar-pedidos-entrantes`
-- `P2` `operaciones/coordinar-stock-y-demanda`
-- `P2` `operaciones/monitorizar-procesos`
+- `P1` `operations/review-incoming-orders`
+- `P2` `operations/coordinate-stock-and-demand`
+- `P2` `operations/monitor-processes`
 
 ### legal
 
-- `P0` `legal/revisar-contratos-vigentes-y-vencimientos`
-- `P1` `legal/preparar-firma-documental`
+- `P0` `legal/review-active-and-expiring-contracts`
+- `P1` `legal/prepare-document-signing`
 
-### rrhh
+### hr
 
-- `P1` `rrhh/revisar-candidaturas`
-- `P1` `rrhh/seguir-proceso-de-seleccion`
+- `P1` `hr/review-candidates`
+- `P1` `hr/track-hiring-process`
 
 ### marketing
 
-- `P2` `marketing/preparar-campanas-y-audiencias`
-- `P2` `marketing/gestionar-contenido-editorial`
+- `P2` `marketing/prepare-campaigns-and-audiences`
+- `P2` `marketing/manage-editorial-content`
 
-### direccion
+### leadership
 
-- `P0` `direccion/consultar-kpis-y-resumen-ejecutivo`
-- `P1` `direccion/hacer-preguntas-al-dato`
+- `P0` `leadership/review-kpis-and-executive-summary`
+- `P1` `leadership/ask-data-questions`
 
-### operaciones-de-datos
+### data-operations
 
-- `P2` `operaciones-de-datos/cargar-y-sincronizar-datos`
-- `P2` `operaciones-de-datos/revisar-senales-y-activaciones`
+- `P2` `data-operations/load-and-sync-data`
+- `P2` `data-operations/review-signals-and-activations`
 
 ## Backend notes
 
 - Most backend-exposed capabilities are `read_kpis`, `list_collections`, `read_collection_data`, `upload_files`, and `receive_webhooks`.
-- Generic external `create_collection_data` is currently available for `lead-management.leads`.
-- `lead-management` also exposes special actions for proposal generation, proposal sending, and rerunning lead intelligence.
-- Some internal backend flows support more than the generic MCP layer exposes, so skills must distinguish between direct action and assisted recommendation.
+- Generic external `create_collection_data` is currently available for `lead-management.leads`, `candidate-evaluation.job_openings`, `candidate-evaluation.profiles`, `candidate-evaluation.applications`, `candidate-evaluation.evaluations`, `form-generator.forms`, `form-generator.fields`, and `form-generator.submissions`.
+- Generic action discovery and execution are available through `module.actions` and `module.action` as the advanced MCP layer.
+- Concrete business MCP tools are the preferred worker-facing layer when available. The current concrete catalog also includes support and approval actions, order-ingest and order-track status actions, candidate profile/application creation, form publishing, email queue status actions, and process-visibility actions.
+- Skills should prefer concrete tool names first and mention generic `module.actions` or `module.action` only as fallback for advanced clients.
 
 ## Working in this directory
 
 - Add one directory per skill.
 - Keep each `SKILL.md` short, operational, and worker-facing.
+- Include an `Implementation via Bizzmod MCP` section with the exact tools or shortcuts to use and any capability gaps.
 - When backend capabilities change, update the affected skills and this catalog in the same change set.
+- Keep `USER_MANUAL.md` aligned with the current catalog so end users have a single overview of all available skills.
