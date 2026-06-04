@@ -29,6 +29,7 @@ Authoring rules
 
 When changing this folder
 - Update `skills/README.md` when adding, renaming, or removing skills.
+- Update `skills/USER_MANUAL.md` whenever any `SKILL.md` changes so the catalog summary and expected outcomes stay aligned with the current skill behavior.
 - If conventions change, update this file in the same change set.
 - Keep folder references aligned with the repo root `AGENTS.md`.
 - When backend capabilities change, update the MCP implementation section of affected skills so the documented tools stay accurate.

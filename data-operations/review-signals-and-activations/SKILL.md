@@ -35,6 +35,11 @@ Review external business signals and see which ones became activations or action
   - `business-signals.signals.list`
   - `business-signals.executions.list`
   - `business-signals.activations.list`
+- Use `business-signals.approve_signal` when a reviewed signal should move forward.
+- Use `business-signals.discard_signal` when a signal should be closed out as not useful.
+- Use `business-signals.mark_pending_review` when the signal needs to go back into review.
+- Use `business-signals.activate_signal` when the worker is ready to trigger the activation path.
+- Use `business-signals.close_signal` when follow-up is complete and the signal should be finalized.
 - Use `module.kpis` for `business-signals` when the worker starts with a summary request.
 
 ## Output

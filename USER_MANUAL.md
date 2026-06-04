@@ -141,7 +141,7 @@ This manual explains what each skill in `skills/` is for, when to use it, and wh
 #### `marketing/manage-editorial-content`
 
 - Use for: reviewing editorial opportunities, projects, and article pipelines.
-- Typical outcome: editorial backlog summary and next publishing actions.
+- Typical outcome: editorial backlog summary plus clear next actions such as generate proposal, generate article, publish, schedule, or discard.
 
 ### Leadership
 
@@ -172,4 +172,4 @@ This manual explains what each skill in `skills/` is for, when to use it, and wh
 - Skills are worker-facing. They describe business tasks, not raw module architecture.
 - Concrete MCP tools should be preferred when the skill lists them.
 - Generic tools such as `module.actions` and `module.action` are fallback options for advanced workflows.
-- Recent concrete additions include campaign pause/activate flows and tax reporting generate/recalculate/validate/export flows, so the related skills now support direct action execution instead of review-only guidance.
+- Recent concrete additions include campaign pause/activate flows, tax reporting generate/recalculate/validate/export flows, and editorial proposal/article/publish/schedule/discard flows, so the related skills now support direct action execution instead of review-only guidance.
