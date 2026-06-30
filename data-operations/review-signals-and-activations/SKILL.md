@@ -6,11 +6,11 @@ Advanced operations and strategy staff.
 
 ## Goal
 
-Review external business signals and see which ones became activations or actions.
+Review external market signals and see which ones became activations or actions.
 
 ## Modules
 
-- `business-signals`
+- `market-signals`
 
 ## Backend capabilities
 
@@ -32,15 +32,15 @@ Review external business signals and see which ones became activations or action
 ## Implementation via Bizzmod MCP
 
 - Use:
-  - `business-signals.signals.list`
-  - `business-signals.executions.list`
-  - `business-signals.activations.list`
-- Use `business-signals.approve_signal` when a reviewed signal should move forward.
-- Use `business-signals.discard_signal` when a signal should be closed out as not useful.
-- Use `business-signals.mark_pending_review` when the signal needs to go back into review.
-- Use `business-signals.activate_signal` when the worker is ready to trigger the activation path.
-- Use `business-signals.close_signal` when follow-up is complete and the signal should be finalized.
-- Use `module.kpis` for `business-signals` when the worker starts with a summary request.
+  - `market-signals.signals.list`
+  - `market-signals.executions.list`
+  - `market-signals.activations.list`
+- Use `market-signals.approve_signal` when a reviewed signal should move forward.
+- Use `market-signals.discard_signal` when a signal should be closed out as not useful.
+- Use `market-signals.mark_pending_review` when the signal needs to go back into review.
+- Use `market-signals.activate_signal` when the worker is ready to trigger the activation path.
+- Use `market-signals.close_signal` when follow-up is complete and the signal should be finalized.
+- Use `module.kpis` for `market-signals` when the worker starts with a summary request.
 
 ## Output
 

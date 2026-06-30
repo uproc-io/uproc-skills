@@ -11,7 +11,7 @@ Review process visibility signals and identify what needs intervention.
 ## Modules
 
 - `process-visibility`
-- `business-signals`
+- `market-signals`
 
 ## Backend capabilities
 
@@ -34,10 +34,10 @@ Review process visibility signals and identify what needs intervention.
 
 - Use:
   - `process-visibility.processes.list`
-  - `business-signals.signals.list`
-  - `business-signals.executions.list`
-  - `business-signals.activations.list`
-- Use `module.kpis` on `process-visibility` or `business-signals` for high-level monitoring first.
+  - `market-signals.signals.list`
+  - `market-signals.executions.list`
+  - `market-signals.activations.list`
+- Use `module.kpis` on `process-visibility` or `market-signals` for high-level monitoring first.
 - Use `process-visibility.retry_step` when the worker needs to restart the current blocked step.
 - Use `process-visibility.reassign_owner` when the worker needs to send the process back to the fallback owner flow.
 - Use `process-visibility.cancel_process` when the worker confirms the tracked process should be stopped.

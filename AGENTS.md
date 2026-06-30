@@ -27,6 +27,25 @@ Authoring rules
 - Avoid repo-internal assumptions unless the skill is explicitly meant for this repository.
 - Each `SKILL.md` should include an `Implementation via Bizzmod MCP` section that names the relevant MCP tools, semantic shortcuts, and known capability limits.
 
+## Tracking policy (mandatory)
+
+### TODO.md
+- Before starting work, read `TODO.md` in the skills root.
+- Use `TODO.md` to detect pending work, partially applied requirements, blockers, and follow-ups before making changes.
+- When work leaves unfinished scope or reveals new follow-ups, update `TODO.md` in the same change set.
+- When completing pending items, move them to `DONE.md` and remove from `TODO.md`.
+- **Date grouping**: items within each section must be grouped under `## YYYY-MM-DD` headers.
+- Treat `TODO.md` as the operational handoff and pending-work tracker for skills agent workflows.
+
+### DONE.md
+- Maintain `DONE.md` as the permanent record of completed skills work.
+- When closing a TODO, move the entry to `DONE.md` under a `## YYYY-MM-DD` header.
+
+### REVIEW.md
+- Maintain `REVIEW.md` as the canonical log for skills items needing human review.
+- A review item is any intentionally omitted or postponed scope decision, technical debt, or skill-content gap.
+- Every review entry must include: date, area, item, reason, impact, and follow-up status.
+
 When changing this folder
 - Update `skills/README.md` when adding, renaming, or removing skills.
 - Update `skills/USER_MANUAL.md` whenever any `SKILL.md` changes so the catalog summary and expected outcomes stay aligned with the current skill behavior.

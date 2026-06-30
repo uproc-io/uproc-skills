@@ -148,7 +148,7 @@ This manual explains what each skill in `skills/` is for, when to use it, and wh
 #### `leadership/review-kpis-and-executive-summary`
 
 - Use for: obtaining executive KPI snapshots across modules.
-- Typical outcome: concise summary of the most relevant business signals and metrics.
+- Typical outcome: concise summary of the most relevant market signals and metrics.
 
 #### `leadership/ask-data-questions`
 
@@ -164,7 +164,7 @@ This manual explains what each skill in `skills/` is for, when to use it, and wh
 
 #### `data-operations/review-signals-and-activations`
 
-- Use for: reviewing business signals, activations, and execution trends.
+- Use for: reviewing market signals, activations, and execution trends.
 - Typical outcome: signal summary and activation follow-up list.
 
 ## Notes
