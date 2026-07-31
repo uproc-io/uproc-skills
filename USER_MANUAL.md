@@ -154,6 +154,7 @@ This manual explains what each skill in `skills/` is for, when to use it, and wh
 
 - Use for: asking natural-language business questions to the data chatbot.
 - Typical outcome: answer summary plus any recommended follow-up query.
+- Supports: follow-up questions that build on a previous question (pass the prior question as `context`).
 
 ### Data Operations
 

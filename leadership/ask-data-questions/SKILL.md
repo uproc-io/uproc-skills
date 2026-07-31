@@ -33,6 +33,7 @@ Answer business questions in natural language and ground them in available data 
 
 - Use `data-chatbot.queries.list` to inspect prior analytical queries when relevant.
 - Send the business question with `data-chatbot.send_chat_query` when the worker wants an answer instead of only browsing past queries.
+- For follow-up questions that depend on a previous answer (e.g. "and last month?"), pass the prior question as `context` (foundation query) so the chatbot can reconstruct the full intent.
 - Use `modules.resolve` to find the most relevant business module if the question is not clearly tied to one dataset.
 - Use `module.kpis` and `module.data` as supporting evidence, but do not overpromise raw dataset access for `data-management` until the external metadata is normalized.
 
