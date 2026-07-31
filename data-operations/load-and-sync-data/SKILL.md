@@ -20,6 +20,7 @@ Review synchronization and enrichment activity and prepare the next operational 
 - Read `runs`, `workflows`, `records`, `executions`, and `runs`.
 - Upload and webhook support.
 - `data-management` and `form-generator` need careful handling because their generic collection exposure is not as complete as other modules.
+- ERP integrations: Holded (API v2, Bearer token), Factura Directa (api-key + company id), and Invoice Ninja (X-API-TOKEN) are independent integrations, each with its own credential. A customer selects which ERPs to integrate; each selected ERP syncs `invoices` (sales), `purchases` (expenses), `clients`, or `suppliers` to a destination module (`sales-invoices`, `purchase-invoices`, or `data-management`).
 
 ## Use this skill when
 
@@ -43,6 +44,9 @@ Review synchronization and enrichment activity and prepare the next operational 
 - Use `data-sync.run_workflow` when the worker wants to execute a workflow immediately.
 - Use `data-sync.preview_workflow` before running a workflow if the worker wants a low-risk sample of the records that would be processed.
 - Use `data-sync.dry_run_workflow` when the worker wants a rehearsal without publishing changes.
+- Use `module.get` (`data-sync`) or `module.collection` to inspect the ERP integration status (`erp_integrations`) when the worker needs to see which ERPs are configured for the customer.
+- Use `module.action` (`data-sync` `test_source`) to validate a workflow's source connectivity before enabling it.
+- Use the generic `module.create` (`data-sync` `workflows`) to set up an ERP sync workflow: provide `source_kind=erp`, a `source_resource` (`invoices`/`purchases`/`clients`/`suppliers`), and a `destination_kind` (`sales-invoices`/`purchase-invoices`/`data-management`).
 - Use `data-management.preview_import` to validate a mapped file before ingesting it.
 - Use `data-management.enqueue_import` to queue the actual mapped import.
 - Use `data-management.get_upload_status` or `data-management.get_latest_upload` to monitor import progress.

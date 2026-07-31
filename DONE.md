@@ -3,6 +3,7 @@
 
 ## 2026-07-31
 
+- `data-operations/load-and-sync-data`: añadida la capacidad de integraciones ERP (Holded / Factura Directa / Invoice Ninja, credencial propia por integración, selección de ERPs a integrar, recursos `invoices`/`purchases`/`clients`/`suppliers` → `sales-invoices`/`purchase-invoices`/`data-management`) + herramientas MCP (`module.get` para `erp_integrations`, `module.action` `test_source`, `module.create` workflows ERP). `USER_MANUAL.md` actualizado.
 - `finance/review-invoices-and-capture`: actualizadas las referencias MCP del módulo renombrado `invoice-generator` → `sales-invoices` (tools `sales-invoices.*`).
 
 Completed skills work, grouped by date.
