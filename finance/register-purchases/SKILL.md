@@ -42,8 +42,8 @@ Register supplier invoices (purchases), assign received invoices from invoice-in
   - `module.create` on `purchase-invoices` / `purchase_invoices`
 - Add line items with `module.create` on `purchase-invoices` / `purchase_invoice_lines`.
 - Record payments with `module.create` on `purchase-invoices` / `purchase_invoice_payments`.
-- Advance the lifecycle with `module.status` on `purchase-invoices` / `purchase_invoices` (status `validated` or `paid`).
-- Assign a received invoice to a purchase with `module.action` on `purchase-invoices` (action `assign_from_ingest`, item = the received invoice id).
+- Advance the lifecycle with `purchase-invoices.change_status` (arguments `item_id`, `status` `validated` or `paid`, optional `reason`).
+- Assign a received invoice to a purchase with `purchase-invoices.assign_from_ingest` (argument `invoice_id` = the received invoice id).
 - Find received invoices to assign with `module.data` on `invoice-ingest` / `invoices`.
 - Query the purchase detail (lines, payments, events, PDFs) with `module.data` on `purchase-invoices` / `purchase_invoices` (item id).
 
