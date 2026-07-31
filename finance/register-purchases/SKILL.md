@@ -46,6 +46,7 @@ Register supplier invoices (purchases), assign received invoices from invoice-in
 - Assign a received invoice to a purchase with `purchase-invoices.assign_from_ingest` (argument `invoice_id` = the received invoice id).
 - Find received invoices to assign with `module.data` on `invoice-ingest` / `invoices`.
 - Query the purchase detail (lines, payments, events, PDFs) with `module.data` on `purchase-invoices` / `purchase_invoices` (item id).
+- Manage VeriFactu registrations with `purchase-invoices.resubmit_verifactu` and `purchase-invoices.backfill_verifactu`.
 - Send a purchase to the configured ERP with `purchase-invoices.export_to_erp` (requires `erp_sync_mode` `full` or `push`); `purchase-invoices.configure_erp_sync` sets the mode and `purchase-invoices.run_erp_sync` runs the linked data-sync workflows.
 
 ## Output
