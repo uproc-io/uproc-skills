@@ -63,6 +63,7 @@ skills/
 - `P1` `operations/review-incoming-orders`
 - `P2` `operations/coordinate-stock-and-demand`
 - `P2` `operations/monitor-processes`
+- `P2` `operations/file-sync`
 
 ### legal
 

@@ -116,6 +116,12 @@ This manual explains what each skill in `skills/` is for, when to use it, and wh
 
 ### Legal
 
+
+#### `operations/file-sync`
+
+- Use for: copying files between storage providers (SFTP / S3 / Dropbox / Google Drive) with overwrite.
+- Typical outcome: configured transfers and run logs with copied/failed files.
+
 #### `legal/review-active-and-expiring-contracts`
 
 - Use for: reviewing contract status, counterparties, and expiring agreements.
