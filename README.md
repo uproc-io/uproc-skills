@@ -40,6 +40,7 @@ skills/
 ### finance
 
 - `P1` `finance/review-invoices-and-capture`
+- `P1` `finance/register-purchases`
 - `P0` `finance/reconcile-transactions`
 - `P0` `finance/track-payments-and-overdues`
 - `P1` `finance/prepare-tax-reporting`

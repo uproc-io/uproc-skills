@@ -36,6 +36,11 @@ This manual explains what each skill in `skills/` is for, when to use it, and wh
 - Use for: reviewing received invoices and their extraction/capture state.
 - Typical outcome: invoice intake summary and list of records needing manual review.
 
+#### `finance/register-purchases`
+
+- Use for: registering supplier invoices (purchases), assigning received invoices from invoice-ingest, and tracking the purchase lifecycle (received → validated → paid).
+- Typical outcome: purchase records with lines, payments, and current status.
+
 #### `finance/reconcile-transactions`
 
 - Use for: reconciling entries, extracts, and matches.
