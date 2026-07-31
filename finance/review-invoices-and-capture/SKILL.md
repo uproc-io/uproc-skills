@@ -43,6 +43,8 @@ Compare received invoice capture with issued invoice records and identify gaps o
 - Use `sales-invoices.add_invoice_line`, `sales-invoices.update_invoice_line`, and `sales-invoices.delete_invoice_line` when the worker needs to fix invoice composition before issuing or correcting the document.
 - Use `sales-invoices.rectify_invoice` when an issued invoice must be corrected.
 - Use `sales-invoices.send_invoice` when the worker is ready to send the final invoice.
+- Use `sales-invoices.export_to_erp` to send a specific issued invoice to the configured ERP (only works when `erp_sync_mode` is `full` or `push`; otherwise a warning is returned). `sales-invoices.configure_erp_sync` (set the mode) and `sales-invoices.run_erp_sync` (run the linked data-sync workflows now) cover the activation flow.
+- Use `sales-invoices.get_verifactu_xml`, `sales-invoices.resubmit_verifactu`, and `sales-invoices.backfill_verifactu` to manage VeriFactu (Spain) registrations: download the AEAT SF v1.1 file, retry a registration, or register already-issued invoices into the chain.
 - Use `module.kpis` for both modules if the worker asks for a quick control summary before drilling into rows.
 
 ## Output

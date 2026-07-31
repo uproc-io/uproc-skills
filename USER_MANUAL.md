@@ -35,11 +35,13 @@ This manual explains what each skill in `skills/` is for, when to use it, and wh
 
 - Use for: reviewing received invoices and their extraction/capture state.
 - Typical outcome: invoice intake summary and list of records needing manual review.
+- Also covers: sending issued invoices to an ERP (`sales-invoices.export_to_erp`) and VeriFactu (Spain) registration management (download XML, resubmit, backfill).
 
 #### `finance/register-purchases`
 
 - Use for: registering supplier invoices (purchases), assigning received invoices from invoice-ingest, and tracking the purchase lifecycle (received → validated → paid).
 - Typical outcome: purchase records with lines, payments, and current status.
+- Also covers: sending purchases to an ERP (`purchase-invoices.export_to_erp`).
 
 #### `finance/reconcile-transactions`
 
