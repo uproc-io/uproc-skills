@@ -1,5 +1,10 @@
 # DONE
 
+
+## 2026-07-31
+
+- `finance/review-invoices-and-capture`: actualizadas las referencias MCP del módulo renombrado `invoice-generator` → `sales-invoices` (tools `sales-invoices.*`).
+
 Completed skills work, grouped by date.
 
 ## 2026-07-31

@@ -11,7 +11,7 @@ Compare received invoice capture with issued invoice records and identify gaps o
 ## Modules
 
 - `invoice-ingest`
-- `invoice-generator`
+- `sales-invoices`
 
 ## Backend capabilities
 
@@ -34,15 +34,15 @@ Compare received invoice capture with issued invoice records and identify gaps o
 
 - Query incoming data with `invoice-ingest.invoices.list` and `invoice-ingest.emails.list` when needed.
 - Query issued invoice context with:
-  - `invoice-generator.invoices.list`
-  - `invoice-generator.invoice_lines.list`
-  - `invoice-generator.series.list`
-- Use `invoice-generator.preview_invoice_pdf` before issuing or correcting a draft invoice.
-- Use `invoice-generator.get_invoice_pdf` when the worker needs the final generated PDF for an existing invoice.
-- Use `invoice-generator.issue_invoice` when the worker is ready to move a draft invoice into the issuing workflow.
-- Use `invoice-generator.add_invoice_line`, `invoice-generator.update_invoice_line`, and `invoice-generator.delete_invoice_line` when the worker needs to fix invoice composition before issuing or correcting the document.
-- Use `invoice-generator.rectify_invoice` when an issued invoice must be corrected.
-- Use `invoice-generator.send_invoice` when the worker is ready to send the final invoice.
+  - `sales-invoices.invoices.list`
+  - `sales-invoices.invoice_lines.list`
+  - `sales-invoices.series.list`
+- Use `sales-invoices.preview_invoice_pdf` before issuing or correcting a draft invoice.
+- Use `sales-invoices.get_invoice_pdf` when the worker needs the final generated PDF for an existing invoice.
+- Use `sales-invoices.issue_invoice` when the worker is ready to move a draft invoice into the issuing workflow.
+- Use `sales-invoices.add_invoice_line`, `sales-invoices.update_invoice_line`, and `sales-invoices.delete_invoice_line` when the worker needs to fix invoice composition before issuing or correcting the document.
+- Use `sales-invoices.rectify_invoice` when an issued invoice must be corrected.
+- Use `sales-invoices.send_invoice` when the worker is ready to send the final invoice.
 - Use `module.kpis` for both modules if the worker asks for a quick control summary before drilling into rows.
 
 ## Output
