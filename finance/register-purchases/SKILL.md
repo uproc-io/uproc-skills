@@ -42,6 +42,7 @@ Register supplier invoices (purchases), assign received invoices from invoice-in
   - `module.create` on `purchase-invoices` / `purchase_invoices`
 - Add line items with `module.create` on `purchase-invoices` / `purchase_invoice_lines`.
 - Record payments with `module.create` on `purchase-invoices` / `purchase_invoice_payments`.
+- For recurring supplier bills (e.g. rent, subscriptions), create a template with `module.create` on `purchase-invoices` / `recurring_invoices` (or `purchase-invoices.create_recurring_from_invoice` from an existing purchase) and trigger the next draft with `purchase-invoices.generate_recurring_invoice`. Generated drafts arrive as `received`.
 - Advance the lifecycle with `purchase-invoices.change_status` (arguments `item_id`, `status` `validated` or `paid`, optional `reason`).
 - Assign a received invoice to a purchase with `purchase-invoices.assign_from_ingest` (argument `invoice_id` = the received invoice id).
 - Find received invoices to assign with `module.data` on `invoice-ingest` / `invoices`.
