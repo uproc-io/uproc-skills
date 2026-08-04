@@ -20,7 +20,7 @@ Review synchronization and enrichment activity and prepare the next operational 
 - Read `runs`, `workflows`, `records`, `executions`, and `runs`.
 - Upload and webhook support.
 - `data-management` and `form-generator` need careful handling because their generic collection exposure is not as complete as other modules.
-- ERP integrations: Holded (API v2, Bearer token), Factura Directa (api-key + company id), and Invoice Ninja (X-API-TOKEN) are independent integrations, each with its own credential. A customer selects which ERPs to integrate; each selected ERP syncs `invoices` (sales), `purchases` (expenses), `clients`, or `suppliers` to a destination module (`sales-invoices`, `purchase-invoices`, or `data-management`).
+- ERP and accounting integrations: Holded (API v2, Bearer token), Factura Directa (api-key + company id), Invoice Ninja (X-API-TOKEN), Xero (OAuth2 access token + tenant id), QuickBooks (OAuth2 access token + realmId), Pandle, QuickFile, ClearBooks, Bonsai and Capium (API key/token) are independent integrations, each with its own credential. A customer selects which integrations to use; each selected one syncs `invoices` (sales), `purchases` (expenses), `clients`, or `suppliers` to a destination module (`sales-invoices`, `purchase-invoices`, or `data-management`). Integrations can belong to several groups (e.g. `erp` + `accounting`); some accounting integrations (FreeAgent, Zoho Books, NetSuite, Odoo, Ember, FreshBooks, Dynamics 365 Business Central, Sage Intacct) are registered but not yet available (`available=false`).
 
 ## Use this skill when
 

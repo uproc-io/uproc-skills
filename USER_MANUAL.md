@@ -173,8 +173,8 @@ This manual explains what each skill in `skills/` is for, when to use it, and wh
 
 #### `data-operations/load-and-sync-data`
 
-- Use for: reviewing sync health, imports, workflows, form publishing readiness, and setting up ERP sync integrations (Holded, Factura Directa, Invoice Ninja).
-- Typical outcome: pipeline health summary, recommended corrective actions, and configured/validated ERP sync workflows.
+- Use for: reviewing sync health, imports, workflows, form publishing readiness, and setting up ERP/accounting sync integrations (Holded, Factura Directa, Invoice Ninja, Xero, QuickBooks, and other accounting software grouped by `erp`/`accounting`).
+- Typical outcome: pipeline health summary, recommended corrective actions, and configured/validated sync workflows.
 
 #### `data-operations/review-signals-and-activations`
 

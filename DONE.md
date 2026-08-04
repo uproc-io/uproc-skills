@@ -1,6 +1,10 @@
 # DONE
 
 
+## 2026-08-04
+- `data-operations/load-and-sync-data`: actualizada la sección de integraciones — añadidas las de software contable (Xero, QuickBooks, Pandle, QuickFile, ClearBooks, Bonsai, Capium) y el concepto de grupos multi-miembro (`erp`/`accounting`) con `available=false` para las pendientes. `USER_MANUAL.md` alineado.
+
+
 ## 2026-08-01
 - `finance/review-invoices-and-capture` y `finance/register-purchases`: añadido el flujo de **facturas recurrentes** — colección `recurring_invoices` (leer/crear), `sales-invoices.create_recurring_from_invoice` / `purchase-invoices.create_recurring_from_invoice` (convertir existente) y `*.generate_recurring_invoice` (generar siguiente draft). Nota: los drafts generados en sales llegan como `draft` (revisión/emisión manual); en purchase como `received`.
 
