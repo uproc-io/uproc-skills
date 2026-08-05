@@ -30,7 +30,7 @@ Review process visibility signals and identify what needs intervention.
 - Highlight signals and activations worth reviewing.
 - Recommend operational escalations.
 
-## Implementation via Bizzmod MCP
+## Implementation via Uproc MCP
 
 - Use:
   - `process-visibility.processes.list`

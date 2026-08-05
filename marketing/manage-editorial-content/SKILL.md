@@ -31,7 +31,7 @@ Review editorial work queues and focus on the highest-value content items.
 - Trigger the next editorial workflow step when an opportunity is ready.
 - Suggest a priority order for work.
 
-## Implementation via Bizzmod MCP
+## Implementation via Uproc MCP
 
 - Use:
   - `editorial-engine.projects.list`

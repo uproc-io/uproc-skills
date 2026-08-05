@@ -30,7 +30,7 @@ Send a proposal with the right message and define the immediate follow-up plan.
 - Trigger sending when the user confirms.
 - Suggest the next follow-up date or action.
 
-## Implementation via Bizzmod MCP
+## Implementation via Uproc MCP
 
 - Read lead context with `lead-management.leads.list`.
 - Use `email-assistant.emails.list` for communication context if prior emails exist.

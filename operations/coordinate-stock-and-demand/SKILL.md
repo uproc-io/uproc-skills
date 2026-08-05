@@ -29,7 +29,7 @@ Review inventory planning inputs and summarize replenishment pressure.
 - Point out likely stock pressure or operational concentration.
 - Recommend where to check manually.
 
-## Implementation via Bizzmod MCP
+## Implementation via Uproc MCP
 
 - Use `inventory-planning.orders.list` as the main data source.
 - Use `module.kpis` for `inventory-planning` if the worker asks for a summary before the row review.

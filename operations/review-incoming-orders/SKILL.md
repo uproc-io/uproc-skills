@@ -30,7 +30,7 @@ Review newly ingested orders and decide what needs follow-up.
 - Compare ingest and tracking views when useful.
 - Flag exceptions needing manual review.
 
-## Implementation via Bizzmod MCP
+## Implementation via Uproc MCP
 
 - Use:
   - `order-ingest.orders.list`

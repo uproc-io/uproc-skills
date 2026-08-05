@@ -34,7 +34,7 @@ Review captured invoices and detect extraction problems, duplicates, or missing 
 - Point out likely duplicates or ambiguous records.
 - Recommend archive, correction, or escalation.
 
-## Implementation via Bizzmod MCP
+## Implementation via Uproc MCP
 
 - Use `invoice-ingest.invoices.list` as the main source for captured invoice review.
 - Optionally inspect `invoice-ingest.emails.list` for intake context.

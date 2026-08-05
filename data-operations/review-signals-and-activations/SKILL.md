@@ -29,7 +29,7 @@ Review external market signals and see which ones became activations or actions.
 - Identify which signals led to activations.
 - Highlight unusual or high-impact signals.
 
-## Implementation via Bizzmod MCP
+## Implementation via Uproc MCP
 
 - Use:
   - `market-signals.signals.list`

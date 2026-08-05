@@ -30,7 +30,7 @@ Review order status and prepare customer communication when delays or issues app
 - Flag delayed or incomplete orders.
 - Prepare a communication draft if needed.
 
-## Implementation via Bizzmod MCP
+## Implementation via Uproc MCP
 
 - Use `order-track.orders.list` as the main order-status source.
 - Use `order-track.emails.list` if intake or communication context matters.

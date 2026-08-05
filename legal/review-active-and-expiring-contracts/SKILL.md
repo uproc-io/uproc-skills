@@ -29,7 +29,7 @@ Review contracts, identify upcoming expirations, and prepare the next action.
 - Group by counterparty when useful.
 - Highlight contracts requiring renewal, review, or escalation.
 
-## Implementation via Bizzmod MCP
+## Implementation via Uproc MCP
 
 - Use:
   - `contract-lifecycle.contracts.list`

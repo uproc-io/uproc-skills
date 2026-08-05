@@ -35,7 +35,7 @@ Register supplier invoices (purchases), assign received invoices from invoice-in
 - Validate data and advance the status when appropriate.
 - Record payments against the purchase.
 
-## Implementation via Bizzmod MCP
+## Implementation via Uproc MCP
 
 - List/create purchases with:
   - `module.data` on `purchase-invoices` / `purchase_invoices`

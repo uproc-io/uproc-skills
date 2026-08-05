@@ -31,7 +31,7 @@ Review tickets and cases, prioritize them, and prepare next actions.
 - Highlight stale tickets and blocked cases.
 - Recommend reply, escalation, or closure review.
 
-## Implementation via Bizzmod MCP
+## Implementation via Uproc MCP
 
 - Use:
   - `customer-care.tickets.list`

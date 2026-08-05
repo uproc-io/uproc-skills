@@ -30,7 +30,7 @@ Summarize business KPIs across relevant modules and highlight where attention is
 - Summarize KPIs and the few records that explain them.
 - Highlight risks, blockers, or unusual changes.
 
-## Implementation via Bizzmod MCP
+## Implementation via Uproc MCP
 
 - Use `modules.resolve` or `modules.search` when the worker asks a broad business question and the relevant module is not obvious.
 - Query summaries with `module.kpis` on the resolved modules.

@@ -30,7 +30,7 @@ Review prospecting results and focus effort on the best opportunities.
 - Flag duplicates or sync issues.
 - Suggest prioritization criteria.
 
-## Implementation via Bizzmod MCP
+## Implementation via Uproc MCP
 
 - Use:
   - `lead-prospecting.strategies.list`

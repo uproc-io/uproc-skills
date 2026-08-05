@@ -33,7 +33,7 @@ Review incoming business documents and identify what needs validation, correctio
 - Group records by type and status.
 - Highlight missing fields, suspicious parsing, or records that require manual review.
 
-## Implementation via Bizzmod MCP
+## Implementation via Uproc MCP
 
 - Start with `module.capabilities` for `invoice-ingest`, `order-ingest`, and `document-ingest` if the environment may differ by customer.
 - Read recent records with `module.data` or the semantic shortcuts:

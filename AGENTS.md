@@ -25,7 +25,7 @@ Authoring rules
 - Prefer ASCII unless the file already uses non-ASCII content or the language requires it.
 - Do not include secrets, tokens, private URLs, or environment-specific credentials.
 - Avoid repo-internal assumptions unless the skill is explicitly meant for this repository.
-- Each `SKILL.md` should include an `Implementation via Bizzmod MCP` section that names the relevant MCP tools, semantic shortcuts, and known capability limits.
+- Each `SKILL.md` should include an `Implementation via Uproc MCP` section that names the relevant MCP tools, semantic shortcuts, and known capability limits.
 
 ## Tracking policy (mandatory)
 

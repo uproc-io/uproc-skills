@@ -29,7 +29,7 @@ Review available tax reports and identify what should be validated before filing
 - Point out missing supporting checks or unresolved financial mismatches.
 - Prepare a concise validation checklist.
 
-## Implementation via Bizzmod MCP
+## Implementation via Uproc MCP
 
 - Use `tax-reporting.reports.list` as the primary reporting source.
 - Use `tax-reporting.generate_report` to trigger a draft generation run for an existing report.

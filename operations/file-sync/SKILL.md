@@ -17,7 +17,7 @@ between SFTP, S3, Dropbox or Google Drive.
 - Credentials of type storage (SFTP / S3 / Dropbox / Google Drive) for source
   and destination, created from admin/credentials.
 
-## Implementation via Bizzmod MCP
+## Implementation via Uproc MCP
 
 - List configured transfers with `module.data` on `file-sync` / `transfers`.
 - List past runs with `module.data` on `file-sync` / `runs` (and per-file logs

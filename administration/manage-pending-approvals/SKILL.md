@@ -30,7 +30,7 @@ Review pending approval requests and prepare a decision-ready summary.
 - Highlight blocked or stale requests.
 - Recommend approve, reject, or escalate.
 
-## Implementation via Bizzmod MCP
+## Implementation via Uproc MCP
 
 - Use `approval-management.requests.list` as the default queue query.
 - Use `module.kpis` for `approval-management` if the worker asks for a summary view before record-level review.

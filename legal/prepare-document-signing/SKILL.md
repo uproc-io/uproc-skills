@@ -31,7 +31,7 @@ Prepare a signing workflow and review pending signature requests.
 - Confirm whether the document is ready.
 - Highlight missing business information before signature.
 
-## Implementation via Bizzmod MCP
+## Implementation via Uproc MCP
 
 - Use `document-signing.requests.list` as the main signing queue source.
 - Use `document-generator.documents.list` to inspect document context.

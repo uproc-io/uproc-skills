@@ -30,7 +30,7 @@ Compare received invoice capture with issued invoice records and identify gaps o
 - Surface mismatches in dates, totals, series, or basic identifiers.
 - Point out what should be checked manually.
 
-## Implementation via Bizzmod MCP
+## Implementation via Uproc MCP
 
 - Query incoming data with `invoice-ingest.invoices.list` and `invoice-ingest.emails.list` when needed.
 - Query issued invoice context with:

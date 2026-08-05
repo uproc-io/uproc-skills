@@ -30,7 +30,7 @@ Prepare a proposal workflow from an existing lead using the backend actions avai
 - Gather proposal title, description, and desired output format.
 - Trigger proposal preparation when the worker confirms.
 
-## Implementation via Bizzmod MCP
+## Implementation via Uproc MCP
 
 - Read the target lead with `lead-management.leads.list`.
 - Generate the proposal directly with `lead-management.generate_lead_proposal`.

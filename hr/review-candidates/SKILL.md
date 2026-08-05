@@ -29,7 +29,7 @@ Review candidates, applications, and evaluations for current hiring processes.
 - Summarize stage, status, and evaluations.
 - Highlight candidates needing decision or movement.
 
-## Implementation via Bizzmod MCP
+## Implementation via Uproc MCP
 
 - Use:
   - `candidate-evaluation.job_openings.list`

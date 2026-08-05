@@ -7,7 +7,7 @@ This manual explains what each skill in `skills/` is for, when to use it, and wh
 - Start from the worker profile folder.
 - Pick the skill whose task name best matches the job to be done.
 - Open the `SKILL.md` file inside that folder.
-- Follow the `Implementation via Bizzmod MCP` section to execute the task with the correct MCP tools.
+- Follow the `Implementation via Uproc MCP` section to execute the task with the correct MCP tools.
 - Prefer the concrete MCP tools named in the skill before falling back to generic helpers such as `module.actions` or `module.action`.
 
 ## Profiles

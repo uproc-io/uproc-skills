@@ -29,7 +29,7 @@ Review recruitment progress and identify blocked stages or pending actions.
 - Flag stalled candidates or missing evaluations.
 - Prepare communication drafts if asked.
 
-## Implementation via Bizzmod MCP
+## Implementation via Uproc MCP
 
 - Use `candidate-evaluation.stage_events.list`, `candidate-evaluation.applications.list`, and `candidate-evaluation.evaluations.list` to track process movement.
 - Use `candidate-evaluation.create_job_opening` when the worker needs to create the opening first.

@@ -4,12 +4,12 @@ This directory contains end-user skills organized by worker profile and day-to-d
 
 ## Design rules
 
-- The primary entry point is the worker profile, not the Bizzmod module name.
+- The primary entry point is the worker profile, not the Uproc module name.
 - Each skill is named after a real task the worker wants to complete.
 - Module names are documented inside each skill as implementation detail.
 - Skills reflect the backend reality: most modules support reading, KPIs, uploads, and webhooks; generic create operations are currently rare.
 - In this catalog, `form-generator` is the canonical name used for forms.
-- Every `SKILL.md` should map the worker task to concrete Bizzmod MCP tools and semantic shortcuts.
+- Every `SKILL.md` should map the worker task to concrete Uproc MCP tools and semantic shortcuts.
 
 ## Structure
 
@@ -102,6 +102,6 @@ skills/
 
 - Add one directory per skill.
 - Keep each `SKILL.md` short, operational, and worker-facing.
-- Include an `Implementation via Bizzmod MCP` section with the exact tools or shortcuts to use and any capability gaps.
+- Include an `Implementation via Uproc MCP` section with the exact tools or shortcuts to use and any capability gaps.
 - When backend capabilities change, update the affected skills and this catalog in the same change set.
 - Keep `USER_MANUAL.md` aligned with the current catalog so end users have a single overview of all available skills.

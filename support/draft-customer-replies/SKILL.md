@@ -29,7 +29,7 @@ Draft clear emails for confirmations, requests for information, follow-ups, and 
 - Use the case or ticket context when available.
 - Produce a ready-to-review draft.
 
-## Implementation via Bizzmod MCP
+## Implementation via Uproc MCP
 
 - Use `email-assistant.emails.list` to inspect recent email context when available.
 - Pull case context from `customer-care.tickets.list` or `case-lifecycle.cases.list` before drafting if the worker references a specific incident.

@@ -1,6 +1,9 @@
 # DONE
 
 
+## 2026-08-05
+- Rename de marca: todas las secciones `## Implementation via Bizzmod MCP` pasan a `## Implementation via Uproc MCP` (32 ficheros: `SKILL.md`, `README.md`, `USER_MANUAL.md`, `AGENTS.md`). Solo texto de marca; el server MCP real (`bizzmod-*` en opencode.json) queda intacto.
+
 ## 2026-08-04
 - `data-operations/load-and-sync-data`: actualizada la sección de integraciones — añadidas las de software contable (Xero, QuickBooks, Pandle, QuickFile, ClearBooks, Bonsai, Capium) y el concepto de grupos multi-miembro (`erp`/`accounting`) con `available=false` para las pendientes. `USER_MANUAL.md` alineado.
 - `data-operations/load-and-sync-data`: añadida la integración **Postiz** (social media scheduling, categoría/grupo `social`, read-only). `USER_MANUAL.md` alineado.

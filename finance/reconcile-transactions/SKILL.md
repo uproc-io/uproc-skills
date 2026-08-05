@@ -29,7 +29,7 @@ Review reconciliation activity, detect unmatched movements, and focus manual eff
 - Highlight unmatched or low-confidence matches.
 - Separate items ready to export from items needing manual review.
 
-## Implementation via Bizzmod MCP
+## Implementation via Uproc MCP
 
 - Use the reconciliation shortcuts directly:
   - `financial-reconciliation.entries.list`

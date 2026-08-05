@@ -30,7 +30,7 @@ Create new leads when needed and organize the first qualification pass.
 - Create the lead when the user confirms.
 - Highlight duplicates or missing enrichment context.
 
-## Implementation via Bizzmod MCP
+## Implementation via Uproc MCP
 
 - Use `lead-management.leads.create` for new lead creation. This is one of the few generic external create shortcuts currently enabled.
 - Read context with:

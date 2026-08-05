@@ -34,7 +34,7 @@ Answer business questions in natural language and ground them in available data 
 - Return a short answer grounded in the available context, capturing the `session_id` to continue.
 - State uncertainty when the backend exposure is limited.
 
-## Implementation via Bizzmod MCP
+## Implementation via Uproc MCP
 
 - Use `data-chatbot.list_domains` to see the available domains (channels) and their sample questions before asking.
 - Use `data-chatbot.queries.list` to inspect prior analytical queries when relevant.

@@ -29,7 +29,7 @@ Review outstanding payments and decide the next communication or escalation step
 - Show which reminders or communications already exist.
 - Suggest who should be contacted next and why.
 
-## Implementation via Bizzmod MCP
+## Implementation via Uproc MCP
 
 - Use:
   - `debt-track.invoices.list`

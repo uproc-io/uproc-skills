@@ -34,7 +34,7 @@ Review synchronization and enrichment activity and prepare the next operational 
 - Highlight failing or stale workflows.
 - Separate what can be retried directly from what needs manual investigation.
 
-## Implementation via Bizzmod MCP
+## Implementation via Uproc MCP
 
 - Use:
   - `data-sync.runs.list`
