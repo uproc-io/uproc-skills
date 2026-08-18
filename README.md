@@ -9,7 +9,10 @@ This directory contains end-user skills organized by worker profile and day-to-d
 - Module names are documented inside each skill as implementation detail.
 - Skills reflect the backend reality: most modules support reading, KPIs, uploads, and webhooks; generic create operations are currently rare.
 - In this catalog, `form-generator` is the canonical name used for forms.
-- Every `SKILL.md` should map the worker task to concrete Uproc MCP tools and semantic shortcuts.
+- Every worker task can be executed through two access paths, and both are documented inside each `SKILL.md`:
+  - `Implementation via Uproc MCP` — concrete MCP tools and semantic shortcuts.
+  - `Implementation via Uproc CLI` — concrete `uproc applications` commands (dedicated business-verb commands when available, generic `module <slug> <collection>` / `module overview <slug> kpis` / `module upload` / `module webhook` otherwise).
+- Prefer the concrete MCP tools / CLI commands named in the skill before falling back to generic helpers such as `module.actions`, `module.action`, or `request`.
 
 ## Structure
 
@@ -36,6 +39,10 @@ skills/
 - `P0` `administration/review-incoming-documents`
 - `P0` `administration/validate-received-invoices`
 - `P1` `administration/manage-pending-approvals`
+- `P1` `administration/classify-documents`
+- `P1` `administration/archive-documents`
+- `P2` `administration/convert-documents`
+- `P2` `administration/unify-documents`
 
 ### finance
 
@@ -88,6 +95,7 @@ skills/
 ### data-operations
 
 - `P2` `data-operations/load-and-sync-data`
+- `P1` `data-operations/run-data-process-tools`
 - `P2` `data-operations/review-signals-and-activations`
 
 ## Backend notes
@@ -97,6 +105,9 @@ skills/
 - Generic action discovery and execution are available through `module.actions` and `module.action` as the advanced MCP layer.
 - Concrete business MCP tools are the preferred worker-facing layer when available. The current concrete catalog also includes support and approval actions, order-ingest and order-track status actions, candidate profile/application creation, form publishing, email queue status actions, and process-visibility actions.
 - Skills should prefer concrete tool names first and mention generic `module.actions` or `module.action` only as fallback for advanced clients.
+- The Uproc CLI (`uproc applications`) exposes the same external API with dedicated business-verb commands for most modules: `email`, `order`, `orders-ingest`, `data-chatbot`, `forms`, `candidate`, `support`, `approval`, `campaign`, `contract`, `process`, `signals`, `editorial`, `signing`, `tax`, `documents`, `inventory`, `cases`, `invoice` (+ `invoice-lines` and `sales-invoices verifactu`), `purchase-invoices`, `sync`, `leads`, `prospecting`, `reconciliation`, and `data-process`.
+- Modules without dedicated CLI business verbs are still reachable through the generic CLI reader `uproc applications module <slug> <collection>` plus `module overview <slug> kpis`, `module upload`, and `module webhook` (this covers `invoice-ingest`, `debt-track`, the `document-*` family, `lead-intelligence`, `data-management`, `investment-analysis`, and `file-sync`).
+- The CLI has no `module create`: record creation covered by skills (for example `file-sync` transfers) is MCP-only (or via the web UI) and each affected skill documents that limit.
 
 ## Working in this directory
 

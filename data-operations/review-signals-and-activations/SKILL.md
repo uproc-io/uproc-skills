@@ -42,6 +42,12 @@ Review external market signals and see which ones became activations or actions.
 - Use `market-signals.close_signal` when follow-up is complete and the signal should be finalized.
 - Use `module.kpis` for `market-signals` when the worker starts with a summary request.
 
+## Implementation via Uproc CLI
+
+- Read signals with `uproc applications signals list [--page 1]`, `uproc applications signals list-executions [--page 1]`, and `uproc applications signals list-activations [--page 1]`.
+- KPIs: `uproc applications module overview market-signals kpis`.
+- Act on signals with `uproc applications signals approve <signal_id>`, `uproc applications signals discard <signal_id>`, `uproc applications signals mark-pending-review <signal_id>`, `uproc applications signals activate <signal_id>`, and `uproc applications signals close <signal_id>`.
+
 ## Output
 
 - Signal summary.

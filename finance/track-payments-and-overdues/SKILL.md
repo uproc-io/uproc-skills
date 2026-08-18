@@ -38,6 +38,18 @@ Review outstanding payments and decide the next communication or escalation step
   - `debt-track.communications.list`
 - Use `module.kpis` for `debt-track` when the worker wants a collections overview.
 - If the worker needs a new ingestion event from an external system, use `debt-track.communications.webhook` or the generic `module.webhook` path.
+- For the collection strategy flow, use `debt-track.analyze_plan` to get an AI-generated collection plan (reminder intervals, escalation rules, segment strategies), `debt-track.get_plan` / `debt-track.list_plans` to review it, and `debt-track.execute_plan` to apply the accepted plan. `debt-track.regenerate_plan` rebuilds an existing plan with the current AI prompt.
+
+## Implementation via Uproc CLI
+
+- Read debt data with the generic reader (debt-track has no dedicated CLI verbs):
+  - `uproc applications module debt-track invoices [--page 1]`
+  - `uproc applications module debt-track payments [--page 1]`
+  - `uproc applications module debt-track reminders [--page 1]`
+  - `uproc applications module debt-track communications [--page 1]`
+- KPIs: `uproc applications module overview debt-track kpis`.
+- Webhook: `uproc applications module webhook debt-track communications <payload_json>`.
+- Limit: the debt-track AI plan flow (`analyze_plan`/`execute_plan`) is MCP-only.
 
 ## Output
 

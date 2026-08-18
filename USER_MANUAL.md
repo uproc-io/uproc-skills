@@ -8,7 +8,8 @@ This manual explains what each skill in `skills/` is for, when to use it, and wh
 - Pick the skill whose task name best matches the job to be done.
 - Open the `SKILL.md` file inside that folder.
 - Follow the `Implementation via Uproc MCP` section to execute the task with the correct MCP tools.
-- Prefer the concrete MCP tools named in the skill before falling back to generic helpers such as `module.actions` or `module.action`.
+- Alternatively, follow the `Implementation via Uproc CLI` section to execute the same task with the `uproc applications` CLI.
+- Prefer the concrete MCP tools / CLI commands named in the skill before falling back to generic helpers such as `module.actions`, `module.action`, or `request`.
 
 ## Profiles
 
@@ -28,6 +29,26 @@ This manual explains what each skill in `skills/` is for, when to use it, and wh
 
 - Use for: reviewing the approval queue and deciding whether to approve, reject, or reassign requests.
 - Typical outcome: prioritized approval summary and action-ready decision list.
+
+#### `administration/classify-documents`
+
+- Use for: reviewing the document classifier folders and keeping the classification pipeline healthy.
+- Typical outcome: classification status summary and next routing/upload actions.
+
+#### `administration/archive-documents`
+
+- Use for: managing document archiving folders and organizing stored documents.
+- Typical outcome: archive status summary and next archive/upload actions.
+
+#### `administration/convert-documents`
+
+- Use for: reviewing document conversion folders and checking conversion processing health.
+- Typical outcome: conversion summary, failures, and next upload/rerun actions.
+
+#### `administration/unify-documents`
+
+- Use for: reviewing document unification folders and the deduplication pipeline.
+- Typical outcome: unification summary, pending duplicates, and next actions.
 
 ### Finance
 
@@ -114,13 +135,12 @@ This manual explains what each skill in `skills/` is for, when to use it, and wh
 - Use for: reviewing operational process visibility and detecting blocked flows.
 - Typical outcome: process status summary and escalation list.
 
-### Legal
-
-
 #### `operations/file-sync`
 
 - Use for: copying files between storage providers (SFTP / S3 / Dropbox / Google Drive) with overwrite.
 - Typical outcome: configured transfers and run logs with copied/failed files.
+
+### Legal
 
 #### `legal/review-active-and-expiring-contracts`
 
@@ -176,6 +196,11 @@ This manual explains what each skill in `skills/` is for, when to use it, and wh
 - Use for: reviewing sync health, imports, workflows, form publishing readiness, and setting up ERP/accounting sync integrations (Holded, Factura Directa, Invoice Ninja, Xero, QuickBooks, and other accounting software grouped by `erp`/`accounting`; Postiz for social media, group `social`).
 - Typical outcome: pipeline health summary, recommended corrective actions, and configured/validated sync workflows.
 
+#### `data-operations/run-data-process-tools`
+
+- Use for: searching the data-process tool catalog, inspecting tool specs, executing validation/cleaning/enrichment tools inline, and queueing background batch runs over a data-management entity.
+- Typical outcome: executed tool results and batch runs with per-record outcomes.
+
 #### `data-operations/review-signals-and-activations`
 
 - Use for: reviewing market signals, activations, and execution trends.
@@ -185,5 +210,6 @@ This manual explains what each skill in `skills/` is for, when to use it, and wh
 
 - Skills are worker-facing. They describe business tasks, not raw module architecture.
 - Concrete MCP tools should be preferred when the skill lists them.
-- Generic tools such as `module.actions` and `module.action` are fallback options for advanced workflows.
+- Concrete Uproc CLI commands (`uproc applications ...`) should be preferred when the skill lists them.
+- Generic tools such as `module.actions`, `module.action`, and `request` are fallback options for advanced workflows.
 - Recent concrete additions include campaign pause/activate flows, tax reporting generate/recalculate/validate/export flows, and editorial proposal/article/publish/schedule/discard flows, so the related skills now support direct action execution instead of review-only guidance.

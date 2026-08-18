@@ -50,6 +50,16 @@ Compare received invoice capture with issued invoice records and identify gaps o
 - Use `sales-invoices.get_verifactu_xml`, `sales-invoices.resubmit_verifactu`, and `sales-invoices.backfill_verifactu` to manage VeriFactu (Spain) registrations: download the AEAT SF v1.1 file, retry a registration, or register already-issued invoices into the chain.
 - Use `module.kpis` for both modules if the worker asks for a quick control summary before drilling into rows.
 
+## Implementation via Uproc CLI
+
+- Read incoming data with the generic reader (invoice-ingest has no dedicated CLI verbs): `uproc applications module invoice-ingest invoices [--page 1]` and `uproc applications module invoice-ingest emails [--page 1]`.
+- Read issued invoice context with `uproc applications invoice list [--page 1]`, `uproc applications invoice-lines list [--page 1]`, and the generic readers `uproc applications module sales-invoices series [--page 1]` / `uproc applications module sales-invoices recurring_invoices [--page 1]`.
+- Fix invoice composition with `uproc applications invoice-lines add <invoice_id> <concept> [quantity] [unit_price] [tax_rate] [sort_order]`, `uproc applications invoice-lines update <invoice_id> <line_id> [...]`, and `uproc applications invoice-lines delete <invoice_id> <line_id>`.
+- Move the invoice forward with `uproc applications invoice issue <invoice_id>`, `uproc applications invoice send <invoice_id> [email] [subject] [message]`, `uproc applications invoice rectify <invoice_id> [reason]`, and `uproc applications invoice get-pdf <invoice_id>`.
+- Manage VeriFactu with `uproc applications sales-invoices verifactu resubmit <invoice_id>`, `uproc applications sales-invoices verifactu backfill`, and `uproc applications sales-invoices verifactu xml <invoice_id>`.
+- KPIs: `uproc applications module overview invoice-ingest kpis` and `uproc applications module overview sales-invoices kpis`.
+- Limits: `preview_invoice_pdf`, `cancel_invoice`, recurring creation/generation, and the ERP sync verbs (`export_to_erp`, `configure_erp_sync`, `run_erp_sync`, `run_verifactu`) have no CLI command and are MCP-only (or web UI).
+
 ## Output
 
 - Comparison summary.

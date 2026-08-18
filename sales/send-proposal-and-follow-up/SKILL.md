@@ -37,6 +37,13 @@ Send a proposal with the right message and define the immediate follow-up plan.
 - Send the proposal with `lead-management.send_lead_proposal`.
 - Use `module.actions` or `module.action` only as an advanced fallback if the client is operating at the generic MCP layer.
 
+## Implementation via Uproc CLI
+
+- Read lead context with `uproc applications leads list [--page 1]`.
+- Read communication context with `uproc applications email list [--page 1]`.
+- Send the proposal with `uproc applications leads send-proposal <lead_id> <mailbox_id> <to_email> <subject> <body> [proposal_url]`.
+- Manage the email queue with `uproc applications email mark-processed <email_id>` / `uproc applications email archive <email_id>` if needed.
+
 ## Output
 
 - Sending summary.

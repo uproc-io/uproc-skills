@@ -38,6 +38,13 @@ Prepare a proposal workflow from an existing lead using the backend actions avai
 - Use `document-generator.documents.list` to review generated document context when available.
 - Use `document-generator.mark_review`, `document-generator.mark_ready`, and `document-generator.regenerate_document` when the generated proposal needs another internal drafting pass before it is sent.
 
+## Implementation via Uproc CLI
+
+- Read the target lead with `uproc applications leads list [--page 1]`.
+- Generate the proposal with `uproc applications leads generate-proposal <lead_id> [template_id] [title] [description] [output_format]`.
+- Review generated documents with `uproc applications documents list [--page 1]`.
+- Drafting pass with `uproc applications documents mark-review <document_id>`, `uproc applications documents mark-ready <document_id>`, and `uproc applications documents regenerate <document_id>`.
+
 ## Output
 
 - Proposal request summary.

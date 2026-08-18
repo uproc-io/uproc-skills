@@ -49,6 +49,14 @@ Register supplier invoices (purchases), assign received invoices from invoice-in
 - Query the purchase detail (lines, payments, events, PDFs) with `module.data` on `purchase-invoices` / `purchase_invoices` (item id).
 - Send a purchase to the configured ERP with `purchase-invoices.export_to_erp` (requires `erp_sync_mode` `full` or `push`); `purchase-invoices.configure_erp_sync` sets the mode and `purchase-invoices.run_erp_sync` runs the linked data-sync workflows.
 
+## Implementation via Uproc CLI
+
+- Read purchases with `uproc applications purchase-invoices list [--page 1]`, `uproc applications purchase-invoices list-lines [--page 1]`, and `uproc applications purchase-invoices list-payments [--page 1]`.
+- Advance the lifecycle with `uproc applications purchase-invoices validate <id> [reason]` and `uproc applications purchase-invoices pay <id> [reason]`.
+- Assign a received invoice with `uproc applications purchase-invoices assign-from-ingest <invoice_id> [payload_json]`.
+- Find received invoices with the generic reader `uproc applications module invoice-ingest invoices [--page 1]`.
+- Limit: the CLI has no `module create`, so registering a new purchase, adding lines, or recording payments requires the MCP `module.create` tools (or the web UI). ERP sync commands are MCP-only (`configure_erp_sync` / `run_erp_sync`).
+
 ## Output
 
 - Registered purchase record with its lifecycle status and payment history.

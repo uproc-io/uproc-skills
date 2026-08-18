@@ -42,6 +42,13 @@ Review process visibility signals and identify what needs intervention.
 - Use `process-visibility.reassign_owner` when the worker needs to send the process back to the fallback owner flow.
 - Use `process-visibility.cancel_process` when the worker confirms the tracked process should be stopped.
 
+## Implementation via Uproc CLI
+
+- Read processes with `uproc applications process list [--page 1]`.
+- Read signals with `uproc applications signals list [--page 1]`, `uproc applications signals list-executions [--page 1]`, and `uproc applications signals list-activations [--page 1]`.
+- KPIs: `uproc applications module overview process-visibility kpis` and `uproc applications module overview market-signals kpis`.
+- Act on processes with `uproc applications process retry-step <process_id>`, `uproc applications process reassign-owner <process_id>`, and `uproc applications process cancel <process_id>`.
+
 ## Output
 
 - Process overview.

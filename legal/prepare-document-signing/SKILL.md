@@ -41,6 +41,14 @@ Prepare a signing workflow and review pending signature requests.
 - If the signing preparation depends on a contract record, use `contract-lifecycle.upload_contract_document` to attach the latest draft or annex before triggering the external signature workflow.
 - If a new signature request must be injected from an external workflow, use `module.webhook` or `document-signing.requests.webhook` when the integration path supports it.
 
+## Implementation via Uproc CLI
+
+- Read the signing queue with `uproc applications signing list [--page 1]`.
+- Signing follow-up with `uproc applications signing send-reminder <request_id>`, `uproc applications signing sync-status <request_id>`, `uproc applications signing reopen <request_id>`, and `uproc applications signing cancel <request_id>`.
+- Move the draft through the internal preparation queue with `uproc applications documents list [--page 1]`, `uproc applications documents mark-ready <document_id>`, `uproc applications documents mark-review <document_id>`, `uproc applications documents regenerate <document_id>`, `uproc applications documents archive <document_id>`, and `uproc applications documents restore <document_id>`.
+- Read archival context with `uproc applications module document-archiving folders [--page 1]`.
+- Limits: `contract-lifecycle.upload_contract_document` and `document-signing.requests.webhook` are MCP-only; the CLI covers queue management verbs.
+
 ## Output
 
 - Signing workflow summary.

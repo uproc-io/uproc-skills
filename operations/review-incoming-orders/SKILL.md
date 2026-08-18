@@ -46,6 +46,15 @@ Review newly ingested orders and decide what needs follow-up.
 - Use `order-track.send_reminder` when the worker needs to leave the order in follow-up and trigger reminder handling.
 - Use upload shortcuts only when the worker is injecting source files or payloads.
 
+## Implementation via Uproc CLI
+
+- Read orders with:
+  - `uproc applications orders-ingest list [--page 1]`
+  - `uproc applications orders-ingest list-emails [--page 1]`
+  - `uproc applications order list [--page 1]`
+- Act on ingested orders with `uproc applications orders-ingest reprocess <order_id>`, `uproc applications orders-ingest validate <order_id>`, and `uproc applications orders-ingest send-to-erp <order_id>`.
+- Act on tracked orders with `uproc applications order mark-received <order_id>`, `uproc applications order cancel <order_id>`, and `uproc applications order send-reminder <order_id>`.
+
 ## Output
 
 - Order intake summary.

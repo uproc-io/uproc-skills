@@ -39,6 +39,14 @@ Create new leads when needed and organize the first qualification pass.
   - `lead-intelligence.duplicates.list`
   - `lead-intelligence.executions.list`
 - If the environment varies by customer, confirm create support with `module.capabilities` for `lead-management` before assuming write access.
+- For the lead-intelligence planning flow, use `lead-intelligence.analyze_plan` to get an AI-generated enrichment/scoring plan, `lead-intelligence.get_plan` / `lead-intelligence.list_plans` to review it, and `lead-intelligence.execute_plan` to apply the accepted plan (enrichment steps, scoring rules, and configuration). `lead-intelligence.regenerate_plan` rebuilds an existing plan with the current AI prompt.
+
+## Implementation via Uproc CLI
+
+- Read leads with `uproc applications leads list [--page 1 --sort-field created_at --sort-order desc --filter-field status --filter-value <status>]`.
+- Rerun enrichment for a lead with `uproc applications leads rerun-intelligence <lead_id>`.
+- Lead-intelligence reads use the generic reader (no dedicated CLI verb): `uproc applications module lead-intelligence leads [--page 1]`, `uproc applications module lead-intelligence duplicates [--page 1]`, `uproc applications module lead-intelligence executions [--page 1]`.
+- Limit: the CLI cannot create leads (no `leads create`); lead creation requires the MCP `lead-management.leads.create` tool or the web UI.
 
 ## Output
 

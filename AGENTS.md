@@ -26,6 +26,8 @@ Authoring rules
 - Do not include secrets, tokens, private URLs, or environment-specific credentials.
 - Avoid repo-internal assumptions unless the skill is explicitly meant for this repository.
 - Each `SKILL.md` should include an `Implementation via Uproc MCP` section that names the relevant MCP tools, semantic shortcuts, and known capability limits.
+- Each `SKILL.md` should also include an `Implementation via Uproc CLI` section that names the relevant `uproc applications` commands (dedicated business-verb commands when available; generic `module <slug> <collection>` / `module overview <slug> kpis` / `module upload` / `module webhook` as fallback) and known capability limits (for example, the CLI has no `module create`).
+- Keep both access paths in sync: when a backend capability changes, update the MCP section, the CLI section, and the catalog notes in the same change set.
 
 ## Tracking policy (mandatory)
 

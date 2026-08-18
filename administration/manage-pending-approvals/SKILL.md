@@ -40,6 +40,12 @@ Review pending approval requests and prepare a decision-ready summary.
 - Use `approval-management.reject_request` when the worker is ready to reject a request.
 - Use `approval-management.cancel_request` when the worker needs to explicitly stop an approval flow that should no longer continue.
 
+## Implementation via Uproc CLI
+
+- Read the queue with `uproc applications approval list [--page 1]`.
+- KPIs: `uproc applications module overview approval-management kpis`.
+- Act on requests with `uproc applications approval approve <request_id>`, `uproc applications approval reject <request_id>`, `uproc applications approval reassign <request_id> <approver> [note]`, and `uproc applications approval cancel <request_id>`.
+
 ## Output
 
 - Approval queue summary.

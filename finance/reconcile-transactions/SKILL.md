@@ -40,6 +40,16 @@ Review reconciliation activity, detect unmatched movements, and focus manual eff
 - Use `module.kpis` for `financial-reconciliation` when the worker wants an overview first.
 - For recent activity, sort descending by `created_at` when that field exists in the target collection.
 
+## Implementation via Uproc CLI
+
+- Read reconciliation data with:
+  - `uproc applications reconciliation list-entries [--page 1]`
+  - `uproc applications reconciliation list-extracts [--page 1]`
+  - `uproc applications reconciliation list-exports [--page 1]`
+  - `uproc applications reconciliation list-matches [--page 1]`
+- Trigger a run with `uproc applications reconciliation reconcile [process_id]`.
+- KPIs: `uproc applications module overview financial-reconciliation kpis`.
+
 ## Output
 
 - Reconciliation summary.

@@ -37,6 +37,13 @@ Summarize business KPIs across relevant modules and highlight where attention is
 - Use `module.data` only for the few supporting collections needed to explain a KPI change.
 - Use `data-chatbot.queries.list` if the worker wants visibility into recent analytical questions.
 
+## Implementation via Uproc CLI
+
+- Discover the relevant module with `uproc applications module list` (or the raw `uproc applications request GET /api/v1/external/modules`).
+- Query summaries with `uproc applications module overview <module_slug> kpis` for each resolved module.
+- Drill into the few supporting collections with `uproc applications module <module_slug> <collection> [--page 1]`.
+- Inspect recent analytical questions with `uproc applications data-chatbot list [--page 1]`.
+
 ## Output
 
 - Executive summary.

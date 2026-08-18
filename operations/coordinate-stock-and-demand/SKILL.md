@@ -37,6 +37,12 @@ Review inventory planning inputs and summarize replenishment pressure.
 - Use `inventory-planning.cancel_order` when the worker confirms the replenishment order should be cancelled.
 - Use `inventory-planning.send_reminder` when the worker needs to flag an in-flight order for supplier follow-up.
 
+## Implementation via Uproc CLI
+
+- Read planning orders with `uproc applications inventory list [--page 1]`.
+- KPIs: `uproc applications module overview inventory-planning kpis`.
+- Act on orders with `uproc applications inventory mark-received <order_id>`, `uproc applications inventory cancel <order_id>`, and `uproc applications inventory send-reminder <order_id>`.
+
 ## Output
 
 - Planning summary.

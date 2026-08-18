@@ -39,6 +39,13 @@ Review order status and prepare customer communication when delays or issues app
 - Use `order-track.send_reminder` when the worker needs to push order follow-up before customer communication.
 - Use `email-assistant.emails.list` for drafting context if a previous customer conversation exists.
 
+## Implementation via Uproc CLI
+
+- Read orders with `uproc applications order list [--page 1]`.
+- Read intake/communication context with `uproc applications module order-track emails [--page 1]`.
+- Act on orders with `uproc applications order mark-received <order_id>`, `uproc applications order cancel <order_id>`, and `uproc applications order send-reminder <order_id>`.
+- Inspect email context for the draft with `uproc applications email list [--page 1]`.
+
 ## Output
 
 - Order status summary.

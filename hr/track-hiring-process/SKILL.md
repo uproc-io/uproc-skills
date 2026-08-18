@@ -41,6 +41,13 @@ Review recruitment progress and identify blocked stages or pending actions.
 - Use `email-assistant.emails.list` if previous recruiter communication is relevant.
 - This skill remains conservative on candidate updates beyond the currently exposed opening/profile/application/evaluation and application stage/status actions.
 
+## Implementation via Uproc CLI
+
+- Track movement with `uproc applications candidate list-stage-events [--page 1]`, `uproc applications candidate list-applications [--page 1]`, and `uproc applications candidate list-evaluations [--page 1]`.
+- Advance the funnel with `uproc applications candidate move-stage <application_id> <stage>` and `uproc applications candidate update-status <application_id> <status>`.
+- Create records with `uproc applications candidate create-job-opening <item_json>`, `uproc applications candidate create-profile <item_json>`, `uproc applications candidate create-application <item_json>`, and `uproc applications candidate create-evaluation <item_json>`.
+- Inspect recruiter communication with `uproc applications email list [--page 1]`.
+
 ## Output
 
 - Recruitment progress summary.

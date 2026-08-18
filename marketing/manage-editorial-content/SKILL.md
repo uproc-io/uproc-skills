@@ -44,7 +44,19 @@ Review editorial work queues and focus on the highest-value content items.
   - `editorial-engine.publish`
   - `editorial-engine.schedule`
   - `editorial-engine.discard`
+- For the editorial planning flow, use `editorial-engine.analyze_plan` to get an AI-generated editorial plan (calendar, cadence, content mix), `editorial-engine.get_plan` / `editorial-engine.list_plans` to review it, and `editorial-engine.execute_plan` to create opportunities from the calendar. `editorial-engine.regenerate_plan` rebuilds an existing plan with the current AI prompt.
 - Use `module.kpis` for `editorial-engine` when the worker starts from a summary request.
+
+## Implementation via Uproc CLI
+
+- Read editorial context with:
+  - `uproc applications editorial list-opportunities [--page 1]`
+  - `uproc applications editorial list-projects [--page 1]`
+  - `uproc applications editorial list-articles [--page 1]`
+  - `uproc applications editorial list-combined [--page 1]`
+- Act on opportunities with `uproc applications editorial generate-proposal <opportunity_id>`, `uproc applications editorial generate-article <opportunity_id>`, `uproc applications editorial publish <opportunity_id>`, `uproc applications editorial schedule <opportunity_id>`, and `uproc applications editorial discard <opportunity_id>`.
+- KPIs: `uproc applications module overview editorial-engine kpis`.
+- Limit: the editorial AI plan flow (`analyze_plan`/`execute_plan`) is MCP-only.
 
 ## Output
 

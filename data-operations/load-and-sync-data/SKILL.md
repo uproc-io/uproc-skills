@@ -53,6 +53,8 @@ Review synchronization and enrichment activity and prepare the next operational 
 - Use `data-management.get_upload_status` or `data-management.get_latest_upload` to monitor import progress.
 - Use `data-management.list_tables`, `data-management.create_table`, and `data-management.update_table` for worker-facing table setup and maintenance.
 - Use `data-management.list_columns`, `data-management.create_column`, `data-management.update_column`, and `data-management.reorder_columns` for column-level schema maintenance.
+- For the data normalization flow, use `data-management.analyze_normalization` (entity ids + optional `custom_prompt` / `data_contract`; sends only structural metadata to AI) to get an AI-generated normalization plan, `data-management.get_plan` / `data-management.list_plans` to review it, `data-management.get_row_mappings` to see the exact row-level transformations, and `data-management.execute_normalization` to create the lookup/main entities and replace raw values with FK ids. `data-management.regenerate_plan` rebuilds an existing plan.
+- Use `data-management.smart_import_preview` to match a raw upload against a normalized entity (confidence + column mapping) and `data-management.smart_import_execute` to map and insert unique rows (creating target columns when needed).
 - Use `module.kpis` for `data-sync` or `data-enrichment` when the worker wants an overview first.
 - Use `form-generator.publish_form` when the worker finishes preparing a form and wants to make it live.
 - Use `form-generator.archive_form` when the worker needs to retire a form from active use.
@@ -60,6 +62,16 @@ Review synchronization and enrichment activity and prepare the next operational 
 - Use `form-generator.mark_submission_processed` when the worker finishes handling a form submission.
 - Use `form-generator.archive_submission` when the worker needs to remove a handled submission from the active queue.
 - Treat `form-generator` as the more limited MCP surface; `data-management` now supports worker-facing import monitoring and table/column setup, but destructive deletes still require more advanced routes.
+
+## Implementation via Uproc CLI
+
+- Read sync context with `uproc applications sync list-workflows [--page 1]`, `uproc applications sync list-runs [--page 1]`, and `uproc applications sync list-records [--page 1]`.
+- Run and rehearse workflows with `uproc applications sync run <workflow_id>`, `uproc applications sync preview <workflow_id> [limit]`, and `uproc applications sync dry-run <workflow_id> [limit]`.
+- Push a record to an ERP with `uproc applications sync push-to-erp --credential <id> --resource <resource> --json '<payload>'`.
+- Read data-management tables with the generic reader: `uproc applications module data-management entities [--page 1]` (and per-entity collections as configured).
+- KPIs: `uproc applications module overview data-sync kpis`, `uproc applications module overview data-management kpis`.
+- Forms lifecycle with `uproc applications forms list [--page 1]`, `uproc applications forms list-fields [--page 1]`, `uproc applications forms list-submissions [--page 1]`, `uproc applications forms publish <form_id>`, `uproc applications forms archive <form_id>`, `uproc applications forms archive-submission <submission_id>`, `uproc applications forms restore <form_id>`, and `uproc applications forms mark-submission-processed <submission_id>`.
+- Limits: the data-management normalization/smart-import flow and `data-sync` ERP workflow creation (`module.create`) are MCP-only; the CLI covers workflow run/preview/dry-run and ERP push verbs.
 
 ## Output
 
