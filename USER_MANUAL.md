@@ -11,6 +11,36 @@ This manual explains what each skill in `skills/` is for, when to use it, and wh
 - Alternatively, follow the `Implementation via Uproc CLI` section to execute the same task with the `uproc applications` CLI.
 - Prefer the concrete MCP tools / CLI commands named in the skill before falling back to generic helpers such as `module.actions`, `module.action`, or `request`.
 
+## Setting up access (MCP and CLI)
+
+The skills can be executed through two access paths: the **Uproc MCP** server (from an AI client such as OpenCode, Claude Code, or Codex) or the **Uproc CLI** (`uproc applications`).
+
+### Where the configuration guide is
+
+The full setup guide lives in the help of your dashboard, under *Help → Tutorials → Integrations*:
+
+- CLI: `https://app.uproc.io/help/tutorials/cli`
+- MCP: `https://app.uproc.io/help/tutorials/mcp`
+
+### Values you need
+
+Use exactly the runtime values shown in those tutorials:
+
+- `UPROC_API_URL`: `https://api.uproc.io`
+- `CUSTOMER_DOMAIN`: the customer domain identifier shown in the tutorial (the subdomain of your dashboard).
+- `CUSTOMER_API_KEY`: your customer API key (in Account settings → Installation for private mode, or provided by your Uproc support; the tutorial also shows it).
+- `CUSTOMER_USER_EMAIL`: the email of your Uproc account.
+
+### MCP (compact)
+
+Add the remote MCP server to `opencode.json` pointing to `https://api.uproc.io/api/v1/external/mcp` with the three headers `x-api-key`, `x-customer-domain`, and `x-user-email`. Claude Code, Codex, and other clients use the same URL and headers (transport `http` or `streamable-http`). Verify with `opencode mcp list`.
+
+### CLI (compact)
+
+Install the CLI (Homebrew `brew tap uproc-io/uproc && brew install uproc`, Windows Scoop, or the Linux/macOS install script), then run `uproc applications login` to store your credentials in `config.yml`. Verify with `uproc applications --help`.
+
+Each `SKILL.md` lists the concrete MCP tools and CLI commands for its task in the `Implementation via Uproc MCP` and `Implementation via Uproc CLI` sections.
+
 ## Profiles
 
 ### Administration

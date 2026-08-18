@@ -2,6 +2,8 @@
 
 
 ## 2026-08-18
+- `USER_MANUAL.md` y `README.md`: nueva sección "Setting up access (MCP and CLI)" — explica dónde obtener la guía de configuración (tutoriales de la ayuda del front, `https://app.uproc.io/help/tutorials/cli` y `/mcp`), los valores necesarios (`UPROC_API_URL` = `https://api.uproc.io`, `CUSTOMER_DOMAIN`, `CUSTOMER_API_KEY`, `CUSTOMER_USER_EMAIL`, tomados siempre de los tutoriales) y ejemplos compactos de configuración MCP (OpenCode) y CLI (instalación + `uproc applications login`).
+## 2026-08-18
 - Revisión completa skills vs capacidades MCP + CLI. Ningún skill documentaba el CLI (solo `Implementation via Uproc MCP`); añadida la sección `Implementation via Uproc CLI` a los 29 skills existentes con los comandos `uproc applications` dedicados o el lector genérico `module <slug> <collection>` / `module overview <slug> kpis` / `module upload` / `module webhook`, y las limitaciones por skill (CLI sin `module create`, flujos AI plan MCP-only, verbos MCP-only como `cancel_invoice`, `upload_contract_document`, `run_transfer`).
 - Convenciones: `skills/AGENTS.md` obliga ahora a incluir las secciones MCP y CLI en cada `SKILL.md`; `skills/README.md` y `USER_MANUAL.md` documentan ambas vías de acceso y el catálogo actualizado.
 - Nuevos skills (5): `data-operations/run-data-process-tools` (M56 data-process, MCP + CLI completos) y `administration/classify-documents` (M08), `administration/archive-documents` (M11), `administration/convert-documents` (M10), `administration/unify-documents` (M12) — los cuatro con colección `folders` (read/upload/webhook + KPIs) y nota de limitación.

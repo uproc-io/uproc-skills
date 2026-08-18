@@ -14,6 +14,11 @@ This directory contains end-user skills organized by worker profile and day-to-d
   - `Implementation via Uproc CLI` — concrete `uproc applications` commands (dedicated business-verb commands when available, generic `module <slug> <collection>` / `module overview <slug> kpis` / `module upload` / `module webhook` otherwise).
 - Prefer the concrete MCP tools / CLI commands named in the skill before falling back to generic helpers such as `module.actions`, `module.action`, or `request`.
 
+## Access
+
+- Every task can be executed through **Uproc MCP** (AI clients such as OpenCode, Claude Code, or Codex) or the **Uproc CLI** (`uproc applications`).
+- How to configure both paths and where the required values (`UPROC_API_URL`, `CUSTOMER_DOMAIN`, `CUSTOMER_API_KEY`, `CUSTOMER_USER_EMAIL`) come from is explained in `USER_MANUAL.md` → "Setting up access (MCP and CLI)".
+
 ## Structure
 
 ```text
