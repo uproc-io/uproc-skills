@@ -18,7 +18,7 @@ Review incoming business documents and identify what needs validation, correctio
 ## Backend capabilities
 
 - Read KPIs.
-- Read collections such as `emails`, `invoices`, `orders`, `documents`, and `uploads`.
+- Read collections such as `emails`, `invoices`, `orders`, `documents`, `uploads`, and `templates`.
 - Upload files and receive webhooks.
 - Review the document numbering configuration (`document-numbering.folders`).
 
@@ -46,8 +46,10 @@ Review incoming business documents and identify what needs validation, correctio
   - `document-ingest.documents.list`
   - `document-ingest.uploads.list`
   - `document-ingest.emails.list`
+  - `document-ingest.templates` via `module.data` (read the customer's selected extraction templates)
 - Use `sort_field=created_at` and `sort_order=desc` when the user asks for latest activity.
 - If the worker needs to inject new files, use `module.upload` or the matching `*.upload` shortcut.
+- Template management: read the global catalog with `module.data` on `document-ingest` / `templates` (system rows have no `customer_id`); a customer authorizes a type by adding the catalog template. Do not edit system templates from the worker; system rows are read-only.
 
 ### Document numbering
 
@@ -61,9 +63,11 @@ Review incoming business documents and identify what needs validation, correctio
   - `uproc applications module invoice-ingest invoices [--page 1 --sort-field created_at --sort-order desc]`
   - `uproc applications module order-ingest orders [--page 1 --sort-field created_at --sort-order desc]`
   - `uproc applications module document-ingest documents [--page 1 --sort-field created_at --sort-order desc]`
+  - `uproc applications module document-ingest templates [--page 1]`
   - `uproc applications module document-numbering folders [--page 1]`
 - KPIs: `uproc applications module overview invoice-ingest kpis` (and the same for `order-ingest`, `document-ingest`, `document-numbering`).
 - Upload files: `uproc applications module upload <module_slug> <collection> <file_path>`.
+- Templates: `uproc applications module document-ingest templates` lists the customer's selected templates; the CLI has no `module create`, so adding a catalog template is done from the app.
 - Webhook: `uproc applications module webhook <module_slug> <collection> <payload_json>`.
 
 ## Output

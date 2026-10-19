@@ -1,5 +1,8 @@
 # DONE
 
+## 2026-10-19
+- `administration/review-incoming-documents`: documentada la colección `templates` de `document-ingest` en las secciones MCP y CLI (catálogo global de sistema en solo lectura; el cliente autoriza un tipo añadiendo la plantilla del catálogo; el CLI no tiene `module create`). README/USER_MANUAL sin cambios de estructura.
+
 
 ## 2026-08-18
 - `USER_MANUAL.md` y `README.md`: nueva sección "Setting up access (MCP and CLI)" — explica dónde obtener la guía de configuración (tutoriales de la ayuda del front, `https://app.uproc.io/help/tutorials/cli` y `/mcp`), los valores necesarios (`UPROC_API_URL` = `https://api.uproc.io`, `CUSTOMER_DOMAIN`, `CUSTOMER_API_KEY`, `CUSTOMER_USER_EMAIL`, tomados siempre de los tutoriales) y ejemplos compactos de configuración MCP (OpenCode) y CLI (instalación + `uproc applications login`).
