@@ -34,6 +34,10 @@ Review incoming business documents and identify what needs validation, correctio
 - Sort recent items first when the user asks for the latest records.
 - Group records by type and status.
 - Highlight missing fields, suspicious parsing, or records that require manual review.
+- Use the document-ingest `validation` summary (`errors`, `warnings`, `total`) and the
+  structured `notifications` to prioritise documents that need manual review.
+- For cancelled documents, read `document_type` and the notification's
+  `detection_reason` to explain why the type was rejected.
 
 ## Implementation via Uproc MCP
 
@@ -49,7 +53,7 @@ Review incoming business documents and identify what needs validation, correctio
   - `document-ingest.templates` via `module.data` (read the customer's selected extraction templates)
 - Use `sort_field=created_at` and `sort_order=desc` when the user asks for latest activity.
 - If the worker needs to inject new files, use `module.upload` or the matching `*.upload` shortcut.
-- Template management: read the global catalog with `module.data` on `document-ingest` / `templates` (system rows have no `customer_id`); a customer authorizes a type by adding the catalog template. Do not edit system templates from the worker; system rows are read-only.
+- Template management: read the global catalog with `module.data` on `document-ingest` / `templates` (system rows have no `customer_id`); a customer authorizes a type by adding the catalog template. Do not edit system templates from the worker; system rows are read-only. Customer templates expose `prompt_exceptions`, which are extraction-only instructions appended to the type-specific prompt.
 
 ### Document numbering
 
@@ -69,6 +73,7 @@ Review incoming business documents and identify what needs validation, correctio
 - Upload files: `uproc applications module upload <module_slug> <collection> <file_path>`.
 - Templates: `uproc applications module document-ingest templates` lists the customer's selected templates; the CLI has no `module create`, so adding a catalog template is done from the app.
 - Webhook: `uproc applications module webhook <module_slug> <collection> <payload_json>`.
+- Reprocessing a document is an in-app session action (`POST /api/v1/modules/document-ingest/actions/reprocess`); it is not exposed as an MCP/CLI tool yet.
 
 ## Output
 
