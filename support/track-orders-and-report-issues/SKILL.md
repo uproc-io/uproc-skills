@@ -42,7 +42,7 @@ Review order status and prepare customer communication when delays or issues app
 ## Implementation via Uproc CLI
 
 - Read orders with `uproc applications order list [--page 1]`.
-- Read intake/communication context with `uproc applications module order-track emails [--page 1]`.
+- Read tracked orders context with `uproc applications order-track list [--page 1]`.
 - Act on orders with `uproc applications order mark-received <order_id>`, `uproc applications order cancel <order_id>`, and `uproc applications order send-reminder <order_id>`.
 - Inspect email context for the draft with `uproc applications email list [--page 1]`.
 

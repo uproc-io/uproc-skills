@@ -44,10 +44,10 @@ Review process visibility signals and identify what needs intervention.
 
 ## Implementation via Uproc CLI
 
-- Read processes with `uproc applications process list [--page 1]`.
-- Read signals with `uproc applications signals list [--page 1]`, `uproc applications signals list-executions [--page 1]`, and `uproc applications signals list-activations [--page 1]`.
+- Read processes with `uproc applications process-visibility list [--page 1]`.
+- Read signals with `uproc applications market-signals list [--page 1]`, `uproc applications market-signals list-executions [--page 1]`, and `uproc applications market-signals list-activations [--page 1]`.
 - KPIs: `uproc applications module overview process-visibility kpis` and `uproc applications module overview market-signals kpis`.
-- Act on processes with `uproc applications process retry-step <process_id>`, `uproc applications process reassign-owner <process_id>`, and `uproc applications process cancel <process_id>`.
+- Act on processes with `uproc applications process-visibility retry-step <process_id>`, `uproc applications process-visibility reassign-owner <process_id>`, and `uproc applications process-visibility cancel <process_id>`.
 
 ## Output
 

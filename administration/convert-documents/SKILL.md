@@ -42,7 +42,7 @@ Monitor the document conversion pipeline: review processed and failed conversion
 ## Implementation via Uproc CLI
 
 - KPIs: `uproc applications module overview document-conversion kpis`.
-- Read rows: `uproc applications module document-conversion folders [--page 1 --sort-field key --sort-order asc --filter-field key --filter-value val]`.
+- Read rows: `uproc applications module collection document-conversion folders [--page 1 --sort-field key --sort-order asc --filter-field key --filter-value val]`.
 - Upload: `uproc applications module upload document-conversion folders <file_path>`.
 - Webhook: `uproc applications module webhook document-conversion folders <payload_json>`.
 - Limit: the CLI can only read/upload/webhook this collection; there is no dedicated conversion command.

@@ -42,7 +42,7 @@ Monitor the document unification pipeline: review how documents are being matche
 ## Implementation via Uproc CLI
 
 - KPIs: `uproc applications module overview document-unification kpis`.
-- Read rows: `uproc applications module document-unification folders [--page 1 --sort-field key --sort-order asc --filter-field key --filter-value val]`.
+- Read rows: `uproc applications module collection document-unification folders [--page 1 --sort-field key --sort-order asc --filter-field key --filter-value val]`.
 - Upload: `uproc applications module upload document-unification folders <file_path>`.
 - Webhook: `uproc applications module webhook document-unification folders <payload_json>`.
 - Limit: the CLI can only read/upload/webhook this collection; there is no dedicated unification command.

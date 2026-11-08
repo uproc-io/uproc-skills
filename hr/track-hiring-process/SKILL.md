@@ -43,9 +43,9 @@ Review recruitment progress and identify blocked stages or pending actions.
 
 ## Implementation via Uproc CLI
 
-- Track movement with `uproc applications candidate list-stage-events [--page 1]`, `uproc applications candidate list-applications [--page 1]`, and `uproc applications candidate list-evaluations [--page 1]`.
-- Advance the funnel with `uproc applications candidate move-stage <application_id> <stage>` and `uproc applications candidate update-status <application_id> <status>`.
-- Create records with `uproc applications candidate create-job-opening <item_json>`, `uproc applications candidate create-profile <item_json>`, `uproc applications candidate create-application <item_json>`, and `uproc applications candidate create-evaluation <item_json>`.
+- Track movement with `uproc applications candidate-evaluation list-stage-events [--page 1]`, `uproc applications candidate-evaluation list-applications [--page 1]`, and `uproc applications candidate-evaluation list-evaluations [--page 1]`.
+- Advance the funnel with `uproc applications candidate-evaluation move-stage <application_id> <stage>` and `uproc applications candidate-evaluation update-status <application_id> <status>`.
+- Create records with `uproc applications candidate-evaluation create-job-opening <item_json>`, `uproc applications candidate-evaluation create-profile <item_json>`, `uproc applications candidate-evaluation create-application <item_json>`, and `uproc applications candidate-evaluation create-evaluation <item_json>`.
 - Inspect recruiter communication with `uproc applications email list [--page 1]`.
 
 ## Output

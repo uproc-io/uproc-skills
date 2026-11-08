@@ -40,7 +40,7 @@ Draft clear emails for confirmations, requests for information, follow-ups, and 
 ## Implementation via Uproc CLI
 
 - Inspect recent emails with `uproc applications email list [--page 1]`.
-- Pull support context with `uproc applications support list [--page 1]` or `uproc applications cases list [--page 1]` when the worker references a specific incident.
+- Pull support context with `uproc applications customer-care list [--page 1]` or `uproc applications case-lifecycle list [--page 1]` when the worker references a specific incident.
 - Manage the email queue with `uproc applications email mark-processed <email_id>` and `uproc applications email archive <email_id>`.
 - This skill is guidance-first: the CLI helps fetch context and manage queue state, but message drafting remains the main worker-facing output.
 

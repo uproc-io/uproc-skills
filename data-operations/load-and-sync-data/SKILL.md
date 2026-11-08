@@ -68,7 +68,7 @@ Review synchronization and enrichment activity and prepare the next operational 
 - Read sync context with `uproc applications sync list-workflows [--page 1]`, `uproc applications sync list-runs [--page 1]`, and `uproc applications sync list-records [--page 1]`.
 - Run and rehearse workflows with `uproc applications sync run <workflow_id>`, `uproc applications sync preview <workflow_id> [limit]`, and `uproc applications sync dry-run <workflow_id> [limit]`.
 - Push a record to an ERP with `uproc applications sync push-to-erp --credential <id> --resource <resource> --json '<payload>'`.
-- Read data-management tables with the generic reader: `uproc applications module data-management entities [--page 1]` (and per-entity collections as configured).
+- Read data-management tables with the generic reader: `uproc applications module collection data-management entities [--page 1]` (and per-entity collections as configured).
 - KPIs: `uproc applications module overview data-sync kpis`, `uproc applications module overview data-management kpis`.
 - Forms lifecycle with `uproc applications forms list [--page 1]`, `uproc applications forms list-fields [--page 1]`, `uproc applications forms list-submissions [--page 1]`, `uproc applications forms publish <form_id>`, `uproc applications forms archive <form_id>`, `uproc applications forms archive-submission <submission_id>`, `uproc applications forms restore <form_id>`, and `uproc applications forms mark-submission-processed <submission_id>`.
 - Limits: the data-management normalization/smart-import flow and `data-sync` ERP workflow creation (`module.create`) are MCP-only; the CLI covers workflow run/preview/dry-run and ERP push verbs.

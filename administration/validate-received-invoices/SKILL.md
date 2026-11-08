@@ -43,8 +43,8 @@ Review captured invoices and detect extraction problems, duplicates, or missing 
 
 ## Implementation via Uproc CLI
 
-- Read captured invoices with the generic reader (invoice-ingest has no dedicated CLI verb): `uproc applications module invoice-ingest invoices [--page 1]` and `uproc applications module invoice-ingest emails [--page 1]`.
-- Read the document support modules with the generic reader: `uproc applications module document-classifier folders [--page 1]`, `uproc applications module document-numbering folders [--page 1]`, and `uproc applications module document-archiving folders [--page 1]`.
+- Read captured invoices with the generic reader (invoice-ingest has no dedicated CLI verb): `uproc applications invoice-ingest list-invoices [--page 1]` and `uproc applications invoice-ingest list-emails [--page 1]`.
+- Read the document support modules with the generic reader: `uproc applications module collection document-classifier folders [--page 1]`, `uproc applications module collection document-numbering folders [--page 1]`, and `uproc applications module collection document-archiving folders [--page 1]`.
 - KPIs: `uproc applications module overview invoice-ingest kpis`.
 - Upload: `uproc applications module upload <module_slug> <collection> <file_path>`.
 

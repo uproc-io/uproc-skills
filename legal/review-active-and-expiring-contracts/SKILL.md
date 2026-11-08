@@ -43,9 +43,9 @@ Review contracts, identify upcoming expirations, and prepare the next action.
 
 ## Implementation via Uproc CLI
 
-- Read contracts with `uproc applications contract list [--page 1]`, `uproc applications contract list-expiring [--page 1]`, and `uproc applications contract list-by-counterparty [--page 1]`.
+- Read contracts with `uproc applications contract-lifecycle list [--page 1]`, `uproc applications contract-lifecycle list-expiring [--page 1]`, and `uproc applications contract-lifecycle list-by-counterparty [--page 1]`.
 - KPIs: `uproc applications module overview contract-lifecycle kpis`.
-- Act on contracts with `uproc applications contract update <contract_id> <data_json>`, `uproc applications contract renew <contract_id>`, and `uproc applications contract terminate <contract_id>`.
+- Act on contracts with `uproc applications contract-lifecycle update <contract_id> <data_json>`, `uproc applications contract-lifecycle renew <contract_id>`, and `uproc applications contract-lifecycle terminate <contract_id>`.
 - Limit: `contract-lifecycle.upload_contract_document` has no CLI command and is MCP-only (or web UI).
 
 ## Output

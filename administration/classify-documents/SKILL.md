@@ -42,7 +42,7 @@ Keep the document classification pipeline healthy: review what has been classifi
 ## Implementation via Uproc CLI
 
 - KPIs: `uproc applications module overview document-classifier kpis`.
-- Read rows: `uproc applications module document-classifier folders [--page 1 --sort-field key --sort-order asc --filter-field key --filter-value val]`.
+- Read rows: `uproc applications module collection document-classifier folders [--page 1 --sort-field key --sort-order asc --filter-field key --filter-value val]`.
 - Upload: `uproc applications module upload document-classifier folders <file_path>`.
 - Webhook: `uproc applications module webhook document-classifier folders <payload_json>`.
 - Limit: the CLI can only read/upload/webhook this collection; there is no dedicated classifier command.

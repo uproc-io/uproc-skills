@@ -48,14 +48,14 @@ Review prospecting results and focus effort on the best opportunities.
 ## Implementation via Uproc CLI
 
 - Read prospecting context with:
-  - `uproc applications prospecting list-strategies [--page 1]`
-  - `uproc applications prospecting list-opportunities [--page 1]`
-  - `uproc applications prospecting list-prospects [--page 1]`
-  - `uproc applications prospecting list-executions [--page 1]`
-- Launch a discovery run with `uproc applications prospecting run-discovery <strategy_id> [company] [domain]`.
-- Convert an opportunity into the lead workflow with `uproc applications prospecting send-to-leads <opportunity_id>`.
-- Read campaign context with `uproc applications campaign list [--page 1]` and `uproc applications campaign list-audiences [--page 1]`.
-- Lead-intelligence reads use the generic reader: `uproc applications module lead-intelligence duplicates [--page 1]` / `uproc applications module lead-intelligence sync_logs [--page 1]`.
+  - `uproc applications lead-prospecting list-strategies [--page 1]`
+  - `uproc applications lead-prospecting list-opportunities [--page 1]`
+  - `uproc applications lead-prospecting list-prospects [--page 1]`
+  - `uproc applications lead-prospecting list-executions [--page 1]`
+- Launch a discovery run with `uproc applications lead-prospecting run-discovery <strategy_id> [company] [domain]`.
+- Convert an opportunity into the lead workflow with `uproc applications lead-prospecting send-to-leads <opportunity_id>`.
+- Read campaign context with `uproc applications campaign-automation list [--page 1]` and `uproc applications campaign-automation list-audiences [--page 1]`.
+- Lead-intelligence reads use the generic reader: `uproc applications module collection lead-intelligence duplicates [--page 1]` / `uproc applications module collection lead-intelligence sync_logs [--page 1]`.
 
 ## Output
 

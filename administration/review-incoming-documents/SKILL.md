@@ -64,14 +64,14 @@ Review incoming business documents and identify what needs validation, correctio
 ## Implementation via Uproc CLI
 
 - Read incoming records with the generic CLI reader (there are no dedicated commands for `invoice-ingest`, `order-ingest`, `document-ingest`, or `document-numbering`):
-  - `uproc applications module invoice-ingest invoices [--page 1 --sort-field created_at --sort-order desc]`
-  - `uproc applications module order-ingest orders [--page 1 --sort-field created_at --sort-order desc]`
-  - `uproc applications module document-ingest documents [--page 1 --sort-field created_at --sort-order desc]`
-  - `uproc applications module document-ingest templates [--page 1]`
-  - `uproc applications module document-numbering folders [--page 1]`
+  - `uproc applications invoice-ingest list-invoices [--page 1 --sort-field created_at --sort-order desc]`
+  - `uproc applications order-track list [--page 1 --sort-field created_at --sort-order desc]`
+  - `uproc applications module collection document-ingest documents [--page 1 --sort-field created_at --sort-order desc]`
+  - `uproc applications module collection document-ingest templates [--page 1]`
+  - `uproc applications module collection document-numbering folders [--page 1]`
 - KPIs: `uproc applications module overview invoice-ingest kpis` (and the same for `order-ingest`, `document-ingest`, `document-numbering`).
 - Upload files: `uproc applications module upload <module_slug> <collection> <file_path>`.
-- Templates: `uproc applications module document-ingest templates` lists the customer's selected templates; the CLI has no `module create`, so adding a catalog template is done from the app.
+- Templates: the CLI has no dedicated template management for document-ingest; use the app.
 - Webhook: `uproc applications module webhook <module_slug> <collection> <payload_json>`.
 - Reprocessing a document is an in-app session action (`POST /api/v1/modules/document-ingest/actions/reprocess`); it is not exposed as an MCP/CLI tool yet.
 

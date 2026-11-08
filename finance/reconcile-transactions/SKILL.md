@@ -43,11 +43,11 @@ Review reconciliation activity, detect unmatched movements, and focus manual eff
 ## Implementation via Uproc CLI
 
 - Read reconciliation data with:
-  - `uproc applications reconciliation list-entries [--page 1]`
-  - `uproc applications reconciliation list-extracts [--page 1]`
-  - `uproc applications reconciliation list-exports [--page 1]`
-  - `uproc applications reconciliation list-matches [--page 1]`
-- Trigger a run with `uproc applications reconciliation reconcile [process_id]`.
+  - `uproc applications financial-reconciliation list-entries [--page 1]`
+  - `uproc applications financial-reconciliation list-extracts [--page 1]`
+  - `uproc applications financial-reconciliation list-exports [--page 1]`
+  - `uproc applications financial-reconciliation list-matches [--page 1]`
+- Trigger a run with `uproc applications financial-reconciliation reconcile [process_id]`.
 - KPIs: `uproc applications module overview financial-reconciliation kpis`.
 
 ## Output

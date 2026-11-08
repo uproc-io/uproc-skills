@@ -45,8 +45,8 @@ Prepare a signing workflow and review pending signature requests.
 
 - Read the signing queue with `uproc applications signing list [--page 1]`.
 - Signing follow-up with `uproc applications signing send-reminder <request_id>`, `uproc applications signing sync-status <request_id>`, `uproc applications signing reopen <request_id>`, and `uproc applications signing cancel <request_id>`.
-- Move the draft through the internal preparation queue with `uproc applications documents list [--page 1]`, `uproc applications documents mark-ready <document_id>`, `uproc applications documents mark-review <document_id>`, `uproc applications documents regenerate <document_id>`, `uproc applications documents archive <document_id>`, and `uproc applications documents restore <document_id>`.
-- Read archival context with `uproc applications module document-archiving folders [--page 1]`.
+- Move the draft through the internal preparation queue with `uproc applications document-ingest list [--page 1]`, `uproc applications document-ingest mark-ready <document_id>`, `uproc applications document-ingest mark-review <document_id>`, `uproc applications document-ingest regenerate <document_id>`, `uproc applications document-ingest archive <document_id>`, and `uproc applications document-ingest restore <document_id>`.
+- Read archival context with `uproc applications module collection document-archiving folders [--page 1]`.
 - Limits: `contract-lifecycle.upload_contract_document` and `document-signing.requests.webhook` are MCP-only; the CLI covers queue management verbs.
 
 ## Output

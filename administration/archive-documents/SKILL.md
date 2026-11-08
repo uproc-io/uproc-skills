@@ -42,7 +42,7 @@ Manage the document archiving folders: review what has been archived, detect fai
 ## Implementation via Uproc CLI
 
 - KPIs: `uproc applications module overview document-archiving kpis`.
-- Read rows: `uproc applications module document-archiving folders [--page 1 --sort-field key --sort-order asc --filter-field key --filter-value val]`.
+- Read rows: `uproc applications module collection document-archiving folders [--page 1 --sort-field key --sort-order asc --filter-field key --filter-value val]`.
 - Upload: `uproc applications module upload document-archiving folders <file_path>`.
 - Webhook: `uproc applications module webhook document-archiving folders <payload_json>`.
 - Limit: the CLI can only read/upload/webhook this collection; there is no dedicated archiving command.

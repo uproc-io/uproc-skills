@@ -50,12 +50,12 @@ Review tickets and cases, prioritize them, and prepare next actions.
 
 ## Implementation via Uproc CLI
 
-- Read tickets with `uproc applications support list [--page 1]`.
-- Read cases with `uproc applications cases list [--page 1]`, `uproc applications cases list-by-status [--page 1]`, and `uproc applications cases list-by-type [--page 1]`.
+- Read tickets with `uproc applications customer-care list [--page 1]`.
+- Read cases with `uproc applications case-lifecycle list [--page 1]`, `uproc applications case-lifecycle list-by-status [--page 1]`, and `uproc applications case-lifecycle list-by-type [--page 1]`.
 - KPIs: `uproc applications module overview customer-care kpis` and `uproc applications module overview case-lifecycle kpis`.
-- Open a new ticket with `uproc applications support create-ticket <item_json>`.
-- Route and respond with `uproc applications support assign-ticket <ticket_id> <assignee>`, `uproc applications support reply-ticket <ticket_id> <message>`, `uproc applications support mark-resolved <ticket_id>`, `uproc applications support close-ticket <ticket_id>`, and `uproc applications support reopen-ticket <ticket_id>`.
-- Manage cases with `uproc applications cases add-note <case_id> <content> [created_by]`, `uproc applications cases close <case_id>`, and `uproc applications cases reopen <case_id>`.
+- Open a new ticket with `uproc applications customer-care create-ticket <item_json>`.
+- Route and respond with `uproc applications customer-care assign-ticket <ticket_id> <assignee>`, `uproc applications customer-care reply-ticket <ticket_id> <message>`, `uproc applications customer-care mark-resolved <ticket_id>`, `uproc applications customer-care close-ticket <ticket_id>`, and `uproc applications customer-care reopen-ticket <ticket_id>`.
+- Manage cases with `uproc applications case-lifecycle add-note <case_id> <content> [created_by]`, `uproc applications case-lifecycle close <case_id>`, and `uproc applications case-lifecycle reopen <case_id>`.
 
 ## Output
 

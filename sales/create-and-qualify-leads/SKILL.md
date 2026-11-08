@@ -43,9 +43,9 @@ Create new leads when needed and organize the first qualification pass.
 
 ## Implementation via Uproc CLI
 
-- Read leads with `uproc applications leads list [--page 1 --sort-field created_at --sort-order desc --filter-field status --filter-value <status>]`.
-- Rerun enrichment for a lead with `uproc applications leads rerun-intelligence <lead_id>`.
-- Lead-intelligence reads use the generic reader (no dedicated CLI verb): `uproc applications module lead-intelligence leads [--page 1]`, `uproc applications module lead-intelligence duplicates [--page 1]`, `uproc applications module lead-intelligence executions [--page 1]`.
+- Read leads with `uproc applications lead-management list [--page 1 --sort-field created_at --sort-order desc --filter-field status --filter-value <status>]`.
+- Rerun enrichment for a lead with `uproc applications lead-intelligence rerun-intelligence <lead_id>`.
+- Lead-intelligence reads use the generic reader (no dedicated CLI verb): `uproc applications module collection lead-intelligence leads [--page 1]`, `uproc applications module collection lead-intelligence duplicates [--page 1]`, `uproc applications module collection lead-intelligence executions [--page 1]`.
 - Limit: the CLI cannot create leads (no `leads create`); lead creation requires the MCP `lead-management.leads.create` tool or the web UI.
 
 ## Output

@@ -40,10 +40,10 @@ Prepare a proposal workflow from an existing lead using the backend actions avai
 
 ## Implementation via Uproc CLI
 
-- Read the target lead with `uproc applications leads list [--page 1]`.
-- Generate the proposal with `uproc applications leads generate-proposal <lead_id> [template_id] [title] [description] [output_format]`.
-- Review generated documents with `uproc applications documents list [--page 1]`.
-- Drafting pass with `uproc applications documents mark-review <document_id>`, `uproc applications documents mark-ready <document_id>`, and `uproc applications documents regenerate <document_id>`.
+- Read the target lead with `uproc applications lead-management list [--page 1]`.
+- Generate the proposal with `uproc applications lead-management generate-proposal <lead_id> [template_id] [title] [description] [output_format]`.
+- Review generated documents with `uproc applications document-ingest list [--page 1]`.
+- Drafting pass with `uproc applications document-ingest mark-review <document_id>`, `uproc applications document-ingest mark-ready <document_id>`, and `uproc applications document-ingest regenerate <document_id>`.
 
 ## Output
 

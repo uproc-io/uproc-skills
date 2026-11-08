@@ -39,9 +39,9 @@ Send a proposal with the right message and define the immediate follow-up plan.
 
 ## Implementation via Uproc CLI
 
-- Read lead context with `uproc applications leads list [--page 1]`.
+- Read lead context with `uproc applications lead-management list [--page 1]`.
 - Read communication context with `uproc applications email list [--page 1]`.
-- Send the proposal with `uproc applications leads send-proposal <lead_id> <mailbox_id> <to_email> <subject> <body> [proposal_url]`.
+- Send the proposal with `uproc applications lead-management send-proposal <lead_id> <mailbox_id> <to_email> <subject> <body> [proposal_url]`.
 - Manage the email queue with `uproc applications email mark-processed <email_id>` / `uproc applications email archive <email_id>` if needed.
 
 ## Output

@@ -50,7 +50,7 @@ Answer business questions in natural language and ground them in available data 
 - Continue a conversation with `uproc applications data-chatbot follow-up <origin_session_id> <question> [channel] [domain] [origin_user_id]`.
 - Inspect prior queries with `uproc applications data-chatbot list [--page 1]`.
 - Use the guided flow with `uproc applications data-chatbot interactive`.
-- Supporting evidence: `uproc applications module overview <slug> kpis` and `uproc applications module data-management <collection> [--page 1]`.
+- Supporting evidence: `uproc applications module overview <slug> kpis` and `uproc applications module collection data-management <collection> [--page 1]`.
 
 ## Output
 

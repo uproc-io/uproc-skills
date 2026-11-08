@@ -43,10 +43,10 @@ Review outstanding payments and decide the next communication or escalation step
 ## Implementation via Uproc CLI
 
 - Read debt data with the generic reader (debt-track has no dedicated CLI verbs):
-  - `uproc applications module debt-track invoices [--page 1]`
-  - `uproc applications module debt-track payments [--page 1]`
-  - `uproc applications module debt-track reminders [--page 1]`
-  - `uproc applications module debt-track communications [--page 1]`
+  - `uproc applications debt-track list-invoices [--page 1]`
+  - `uproc applications debt-track list-payments [--page 1]`
+  - `uproc applications debt-track list-reminders [--page 1]`
+  - `uproc applications debt-track list-communications [--page 1]`
 - KPIs: `uproc applications module overview debt-track kpis`.
 - Webhook: `uproc applications module webhook debt-track communications <payload_json>`.
 - Limit: the debt-track AI plan flow (`analyze_plan`/`execute_plan`) is MCP-only.

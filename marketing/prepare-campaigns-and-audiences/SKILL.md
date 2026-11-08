@@ -51,11 +51,11 @@ Review campaign and audience data before activation or optimization.
 
 ## Implementation via Uproc CLI
 
-- Read campaigns and audiences with `uproc applications campaign list [--page 1]` and `uproc applications campaign list-audiences [--page 1]`.
-- Preview enrollment with `uproc applications campaign preview-audience <campaign_id> [limit]`.
-- Persist the audience definition with `uproc applications campaign add-audience <campaign_id> [mode]`.
-- Act on campaigns with `uproc applications campaign pause <campaign_id>`, `uproc applications campaign activate <campaign_id>`, `uproc applications campaign sync-audience <campaign_id> <audience_id>`, and `uproc applications campaign launch-platforms <campaign_id>`.
-- Read prospecting context with `uproc applications prospecting list-opportunities [--page 1]` and `uproc applications prospecting list-prospects [--page 1]`.
+- Read campaigns and audiences with `uproc applications campaign-automation list [--page 1]` and `uproc applications campaign-automation list-audiences [--page 1]`.
+- Preview enrollment with `uproc applications campaign-automation preview-audience <campaign_id> [limit]`.
+- Persist the audience definition with `uproc applications campaign-automation add-audience <campaign_id> [mode]`.
+- Act on campaigns with `uproc applications campaign-automation pause <campaign_id>`, `uproc applications campaign-automation activate <campaign_id>`, `uproc applications campaign-automation sync-audience <campaign_id> <audience_id>`, and `uproc applications campaign-automation launch-platforms <campaign_id>`.
+- Read prospecting context with `uproc applications lead-prospecting list-opportunities [--page 1]` and `uproc applications lead-prospecting list-prospects [--page 1]`.
 - Limit: the campaign AI plan flow (`analyze_plan`/`execute_plan`) and `import_audience_csv` / `record_execution_event` are MCP-only; the CLI covers campaign lifecycle verbs.
 
 ## Output

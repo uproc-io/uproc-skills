@@ -33,9 +33,9 @@ between SFTP, S3, Dropbox or Google Drive.
 
 ## Implementation via Uproc CLI
 
-- Read transfers with `uproc applications module file-sync transfers [--page 1]`.
-- Read past runs with `uproc applications module file-sync runs [--page 1]` (and
-  per-file logs on `uproc applications module file-sync run_files [--page 1]`).
+- Read transfers with `uproc applications module collection file-sync transfers [--page 1]`.
+- Read past runs with `uproc applications module collection file-sync runs [--page 1]` (and
+  per-file logs on `uproc applications module collection file-sync run_files [--page 1]`).
 - KPIs: `uproc applications module overview file-sync kpis`.
 - Limit: the CLI has no `module create` and no `run_transfer` command, so
   creating a transfer or running it now requires the MCP tools

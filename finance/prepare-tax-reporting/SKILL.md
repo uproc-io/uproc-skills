@@ -41,9 +41,9 @@ Review available tax reports and identify what should be validated before filing
 
 ## Implementation via Uproc CLI
 
-- Read reports with `uproc applications tax list [--page 1]`.
-- Run lifecycle actions with `uproc applications tax generate <report_id>`, `uproc applications tax recalculate <report_id>`, `uproc applications tax validate <report_id>`, and `uproc applications tax export <report_id>`.
-- Read reconciliation support context with `uproc applications reconciliation list-matches [--page 1]` and `uproc applications reconciliation list-entries [--page 1]`.
+- Read reports with `uproc applications tax-reporting list [--page 1]`.
+- Run lifecycle actions with `uproc applications tax-reporting generate <report_id>`, `uproc applications tax-reporting recalculate <report_id>`, `uproc applications tax-reporting validate <report_id>`, and `uproc applications tax-reporting export <report_id>`.
+- Read reconciliation support context with `uproc applications financial-reconciliation list-matches [--page 1]` and `uproc applications financial-reconciliation list-entries [--page 1]`.
 - KPIs: `uproc applications module overview tax-reporting kpis`.
 
 ## Output

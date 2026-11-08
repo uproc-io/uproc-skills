@@ -42,9 +42,9 @@ Review pending approval requests and prepare a decision-ready summary.
 
 ## Implementation via Uproc CLI
 
-- Read the queue with `uproc applications approval list [--page 1]`.
+- Read the queue with `uproc applications approval-management list [--page 1]`.
 - KPIs: `uproc applications module overview approval-management kpis`.
-- Act on requests with `uproc applications approval approve <request_id>`, `uproc applications approval reject <request_id>`, `uproc applications approval reassign <request_id> <approver> [note]`, and `uproc applications approval cancel <request_id>`.
+- Act on requests with `uproc applications approval-management approve <request_id>`, `uproc applications approval-management reject <request_id>`, `uproc applications approval-management reassign <request_id> <approver> [note]`, and `uproc applications approval-management cancel <request_id>`.
 
 ## Output
 

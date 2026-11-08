@@ -55,7 +55,7 @@ Register supplier invoices and PDF/JPG tiquets (purchases), assign received invo
 - Read purchases with `uproc applications purchase-invoices list [--page 1]`, `uproc applications purchase-invoices list-lines [--page 1]`, and `uproc applications purchase-invoices list-payments [--page 1]`.
 - Advance the lifecycle with `uproc applications purchase-invoices validate <id> [reason]` and `uproc applications purchase-invoices pay <id> [reason]`.
 - Assign a received invoice with `uproc applications purchase-invoices assign-from-ingest <invoice_id> [payload_json]`.
-- Find received invoices (including tiquets) with the generic reader `uproc applications module purchase-invoices invoices [--page 1]`.
+- Find received invoices (including tiquets) with the generic reader `uproc applications invoice-ingest list-invoices [--page 1]`.
 - Limit: the CLI has no `module create`, so registering a new purchase, adding lines, recording payments, or batch-assigning tiquets requires the MCP `module.create` / action tools (or the web UI). ERP sync commands are MCP-only (`configure_erp_sync` / `run_erp_sync`).
 
 ## Output

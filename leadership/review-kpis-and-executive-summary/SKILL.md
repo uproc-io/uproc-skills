@@ -41,7 +41,7 @@ Summarize business KPIs across relevant modules and highlight where attention is
 
 - Discover the relevant module with `uproc applications module list` (or the raw `uproc applications request GET /api/v1/external/modules`).
 - Query summaries with `uproc applications module overview <module_slug> kpis` for each resolved module.
-- Drill into the few supporting collections with `uproc applications module <module_slug> <collection> [--page 1]`.
+- Drill into the few supporting collections with `uproc applications module collection <module_slug> <collection> [--page 1]`.
 - Inspect recent analytical questions with `uproc applications data-chatbot list [--page 1]`.
 
 ## Output

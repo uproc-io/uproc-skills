@@ -46,12 +46,12 @@ Review candidates, applications, and evaluations for current hiring processes.
 ## Implementation via Uproc CLI
 
 - Read pipeline context with:
-  - `uproc applications candidate list-job-openings [--page 1]`
-  - `uproc applications candidate list-profiles [--page 1]`
-  - `uproc applications candidate list-applications [--page 1]`
-  - `uproc applications candidate list-evaluations [--page 1]`
-  - `uproc applications candidate list-stage-events [--page 1]`
-- Create records with `uproc applications candidate create-job-opening <item_json>`, `uproc applications candidate create-profile <item_json>`, `uproc applications candidate create-application <item_json>`, and `uproc applications candidate create-evaluation <item_json>`.
+  - `uproc applications candidate-evaluation list-job-openings [--page 1]`
+  - `uproc applications candidate-evaluation list-profiles [--page 1]`
+  - `uproc applications candidate-evaluation list-applications [--page 1]`
+  - `uproc applications candidate-evaluation list-evaluations [--page 1]`
+  - `uproc applications candidate-evaluation list-stage-events [--page 1]`
+- Create records with `uproc applications candidate-evaluation create-job-opening <item_json>`, `uproc applications candidate-evaluation create-profile <item_json>`, `uproc applications candidate-evaluation create-application <item_json>`, and `uproc applications candidate-evaluation create-evaluation <item_json>`.
 - KPIs: `uproc applications module overview candidate-evaluation kpis`.
 
 ## Output
