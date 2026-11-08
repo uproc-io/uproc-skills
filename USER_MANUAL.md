@@ -24,20 +24,18 @@ The full setup guide lives in the help of your dashboard, under *Help → Tutori
 
 ### Values you need
 
-Use exactly the runtime values shown in those tutorials:
+Both paths use your **user email** and **user API key**. The API key is sent as a Bearer token in the `Authorization` header.
 
-- `UPROC_API_URL`: `https://api.uproc.io`
-- `CUSTOMER_DOMAIN`: the customer domain identifier shown in the tutorial (the subdomain of your dashboard).
-- `CUSTOMER_API_KEY`: your customer API key (in Account settings → Installation for private mode, or provided by your Uproc support; the tutorial also shows it).
-- `CUSTOMER_USER_EMAIL`: the email of your Uproc account.
+- **User email**: the email of your Uproc account.
+- **User API key**: available in Account settings → Installation (cloud mode) or provided by your Uproc support (private mode).
 
 ### MCP (compact)
 
-Add the remote MCP server to `opencode.json` pointing to `https://api.uproc.io/api/v1/external/mcp` with the three headers `x-api-key`, `x-customer-domain`, and `x-user-email`. Claude Code, Codex, and other clients use the same URL and headers (transport `http` or `streamable-http`). Verify with `opencode mcp list`.
+Add the remote MCP server to `opencode.json` pointing to `https://api.uproc.io/api/v1/external/mcp` with the `Authorization` header set to `Bearer <your_user_api_key>`. Claude Code, Codex, and other clients use the same URL and header (transport `http` or `streamable-http`). Verify with `opencode mcp list`.
 
 ### CLI (compact)
 
-Install the CLI (Homebrew `brew tap uproc-io/uproc && brew install uproc`, Windows Scoop, or the Linux/macOS install script), then run `uproc applications login` to store your credentials in `config.yml`. Verify with `uproc applications --help`.
+Install the CLI (Homebrew `brew tap uproc-io/uproc && brew install uproc`, Windows Scoop, or the Linux/macOS install script), then run `uproc applications login` to store your credentials (API URL and user API key) in `config.yml`. Verify with `uproc applications --help`.
 
 Each `SKILL.md` lists the concrete MCP tools and CLI commands for its task in the `Implementation via Uproc MCP` and `Implementation via Uproc CLI` sections.
 

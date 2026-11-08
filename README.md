@@ -17,7 +17,7 @@ This directory contains end-user skills organized by worker profile and day-to-d
 ## Access
 
 - Every task can be executed through **Uproc MCP** (AI clients such as OpenCode, Claude Code, or Codex) or the **Uproc CLI** (`uproc applications`).
-- How to configure both paths and where the required values (`UPROC_API_URL`, `CUSTOMER_DOMAIN`, `CUSTOMER_API_KEY`, `CUSTOMER_USER_EMAIL`) come from is explained in `USER_MANUAL.md` → "Setting up access (MCP and CLI)".
+- How to configure both paths and where the required values (user email and user API key) come from is explained in `USER_MANUAL.md` → "Setting up access (MCP and CLI)".
 
 ## Structure
 
