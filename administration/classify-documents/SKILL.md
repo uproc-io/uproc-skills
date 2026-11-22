@@ -37,7 +37,7 @@ Keep the document classification pipeline healthy: review what has been classifi
 - Read folder rows with `treatments.classify.folders.list` (or `.get` / `.search` with the same aliases).
 - Upload a new file with `treatments.classify.folders.upload` (`file_name` + base64 `content`).
 - Send a webhook payload with `treatments.classify.folders.webhook` (`raw`, `text`, `message`, `reply_callback`).
-- Limit: the classifier exposes the single `folders` collection (read/upload/webhook); there are no dedicated classification action tools in MCP yet.
+- Process a folder with `treatments.classify.start_upload_batch` (`process_id`) and retry a failed batch with `treatments.classify.retry_upload_batch` (`folder_id`).
 
 ## Implementation via Uproc CLI
 
@@ -45,7 +45,7 @@ Keep the document classification pipeline healthy: review what has been classifi
 - Read rows: `uproc applications module collection document-classifier folders [--page 1 --sort-field key --sort-order asc --filter-field key --filter-value val]`.
 - Upload: `uproc applications module upload document-classifier folders <file_path>`.
 - Webhook: `uproc applications module webhook document-classifier folders <payload_json>`.
-- Limit: the CLI can only read/upload/webhook this collection; there is no dedicated classifier command.
+- Process a folder with `uproc applications treatments classify process <process_id>` and retry it with `uproc applications treatments classify retry <folder_id>`.
 
 ## Output
 

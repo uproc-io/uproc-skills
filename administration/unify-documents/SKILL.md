@@ -45,7 +45,7 @@ Monitor the document unification pipeline: review how documents are being matche
 - Read rows: `uproc applications module collection document-unification folders [--page 1 --sort-field key --sort-order asc --filter-field key --filter-value val]`.
 - Upload: `uproc applications module upload document-unification folders <file_path>`.
 - Webhook: `uproc applications module webhook document-unification folders <payload_json>`.
-- Limit: the CLI can only read/upload/webhook this collection; there is no dedicated unification command.
+- Process a folder with `uproc applications treatments unify process <process_id>` and retry it with `uproc applications treatments unify retry <folder_id>`.
 
 ## Output
 

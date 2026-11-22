@@ -12,8 +12,6 @@ All items grouped by date under each section.
 
 ### 2026-11-22
 
-- **Skills — revisar límites documentados tras el corte v3 (PENDIENTE 2026-11-22 · T1 · skills)** — Algunas skills asumen que el CLI no tiene verbos para ciertas acciones (p. ej. tratamiento por etapa, archive o investments). Tras completar los huecos de CLI, revisar los apartados "Limit" y mover capacidades de "solo MCP" a CLI cuando exista comando. `[skills]+[cli]`
-
 ### 2026-10-31
 
 - **Skills — Campaign Automation: newsletter interno omnicanal (PENDIENTE · complejidad: T1 · ~0.5d · skills · plan: `../backend/docs/plans/campaign-automation-internal-newsletter.md`)** — Cuando back/front cierren F1–F9, revisar y actualizar las skills de worker (marketing/sales/operations) para reflejar el flujo completo: setup de canal/proveedor → campaña recurrente → contenido IA → aprobación → programación → tracking/rebotes/SMS. Documentar qué es externo vs interno y qué evidencias debe recoger el worker. [skills]
