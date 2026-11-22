@@ -10,8 +10,8 @@ Review order status and prepare customer communication when delays or issues app
 
 ## Modules
 
-- `order-track`
-- `email-assistant`
+- `orders.tracking` · suite `operations`
+- `mail` · suite `operations`
 
 ## Backend capabilities
 
@@ -32,19 +32,19 @@ Review order status and prepare customer communication when delays or issues app
 
 ## Implementation via Uproc MCP
 
-- Use `order-track.orders.list` as the main order-status source.
-- Use `order-track.emails.list` if intake or communication context matters.
-- Use `order-track.mark_received` when the worker confirms delivery.
-- Use `order-track.cancel_order` when the worker confirms the order should be cancelled.
-- Use `order-track.send_reminder` when the worker needs to push order follow-up before customer communication.
-- Use `email-assistant.emails.list` for drafting context if a previous customer conversation exists.
+- Use `orders.tracking.orders.list` as the main order-status source.
+- Use `orders.tracking.emails.list` if intake or communication context matters.
+- Use `orders.tracking.mark_received` when the worker confirms delivery.
+- Use `orders.tracking.cancel_order` when the worker confirms the order should be cancelled.
+- Use `orders.tracking.send_reminder` when the worker needs to push order follow-up before customer communication.
+- Use `mail.emails.list` for drafting context if a previous customer conversation exists.
 
 ## Implementation via Uproc CLI
 
-- Read orders with `uproc applications order list [--page 1]`.
-- Read tracked orders context with `uproc applications order-track list [--page 1]`.
-- Act on orders with `uproc applications order mark-received <order_id>`, `uproc applications order cancel <order_id>`, and `uproc applications order send-reminder <order_id>`.
-- Inspect email context for the draft with `uproc applications email list [--page 1]`.
+- Read orders with `uproc applications orders tracking list [--page 1]`.
+- Read tracked orders context with `uproc applications orders tracking list [--page 1]`.
+- Act on orders with `uproc applications orders tracking mark-received <order_id>`, `uproc applications orders tracking cancel <order_id>`, and `uproc applications orders tracking send-reminder <order_id>`.
+- Inspect email context for the draft with `uproc applications mail list [--page 1]`.
 
 ## Output
 

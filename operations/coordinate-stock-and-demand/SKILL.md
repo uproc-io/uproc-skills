@@ -10,7 +10,7 @@ Review inventory planning inputs and summarize replenishment pressure.
 
 ## Modules
 
-- `inventory-planning`
+- `inventory` · suite `operations`
 
 ## Backend capabilities
 
@@ -31,11 +31,11 @@ Review inventory planning inputs and summarize replenishment pressure.
 
 ## Implementation via Uproc MCP
 
-- Use `inventory-planning.orders.list` as the main data source.
-- Use `module.kpis` for `inventory-planning` if the worker asks for a summary before the row review.
-- Use `inventory-planning.mark_received` when the worker confirms an incoming order has been physically received.
-- Use `inventory-planning.cancel_order` when the worker confirms the replenishment order should be cancelled.
-- Use `inventory-planning.send_reminder` when the worker needs to flag an in-flight order for supplier follow-up.
+- Use `inventory.orders.list` as the main data source.
+- Use `module.kpis` for `inventory` if the worker asks for a summary before the row review.
+- Use `inventory.mark_received` when the worker confirms an incoming order has been physically received.
+- Use `inventory.cancel_order` when the worker confirms the replenishment order should be cancelled.
+- Use `inventory.send_reminder` when the worker needs to flag an in-flight order for supplier follow-up.
 
 ## Implementation via Uproc CLI
 

@@ -11,16 +11,16 @@ Review incoming business documents and identify what needs validation, correctio
 ## Modules
 
 - `invoice-ingest`
-- `order-ingest`
-- `document-ingest`
-- `document-numbering`
+- `orders.intake` · suite `operations`
+- `ingest` · suite `documents`
+- `treatments.number` · suite `documents`
 
 ## Backend capabilities
 
 - Read KPIs.
 - Read collections such as `emails`, `invoices`, `orders`, `documents`, `uploads`, and `templates`.
 - Upload files and receive webhooks.
-- Review the document numbering configuration (`document-numbering.folders`).
+- Review the document numbering configuration (`treatments.number.folders`).
 
 ## Use this skill when
 
@@ -41,35 +41,35 @@ Review incoming business documents and identify what needs validation, correctio
 
 ## Implementation via Uproc MCP
 
-- Start with `module.capabilities` for `invoice-ingest`, `order-ingest`, and `document-ingest` if the environment may differ by customer.
+- Start with `module.capabilities` for `invoice-ingest`, `orders.intake`, and `ingest` if the environment may differ by customer.
 - Read recent records with `module.data` or the semantic shortcuts:
   - `invoice-ingest.emails.list`
   - `invoice-ingest.invoices.list`
-  - `order-ingest.orders.list`
-  - `order-ingest.emails.list`
-  - `document-ingest.documents.list`
-  - `document-ingest.uploads.list`
-  - `document-ingest.emails.list`
-  - `document-ingest.templates` via `module.data` (read the customer's selected extraction templates)
+  - `orders.intake.orders.list`
+  - `orders.intake.emails.list`
+  - `ingest.documents.list`
+  - `ingest.uploads.list`
+  - `ingest.emails.list`
+  - `ingest.templates` via `module.data` (read the customer's selected extraction templates)
 - Use `sort_field=created_at` and `sort_order=desc` when the user asks for latest activity.
 - If the worker needs to inject new files, use `module.upload` or the matching `*.upload` shortcut.
-- Template management: read the global catalog with `module.data` on `document-ingest` / `templates` (system rows have no `customer_id`); a customer authorizes a type by adding the catalog template. Do not edit system templates from the worker; system rows are read-only. Customer templates expose `prompt_exceptions`, which are extraction-only instructions appended to the type-specific prompt.
+- Template management: read the global catalog with `module.data` on `ingest` / `templates` (system rows have no `customer_id`); a customer authorizes a type by adding the catalog template. Do not edit system templates from the worker; system rows are read-only. Customer templates expose `prompt_exceptions`, which are extraction-only instructions appended to the type-specific prompt.
 
 ### Document numbering
 
-- Review the document numbering configuration with `module.data` on `document-numbering` / `folders` (or `module.kpis` for the overview).
-- Upload new numbering definitions with `module.upload` on `document-numbering` / `folders`.
+- Review the document numbering configuration with `module.data` on `treatments.number` / `folders` (or `module.kpis` for the overview).
+- Upload new numbering definitions with `module.upload` on `treatments.number` / `folders`.
 - Limit: numbering is configuration data exposed as the single `folders` collection (read/upload/webhook); there are no dedicated numbering action tools in MCP yet.
 
 ## Implementation via Uproc CLI
 
-- Read incoming records with the generic CLI reader (there are no dedicated commands for `invoice-ingest`, `order-ingest`, `document-ingest`, or `document-numbering`):
+- Read incoming records with the generic CLI reader (there are no dedicated commands for `invoice-ingest`, `orders.intake`, `ingest`, or `treatments.number`):
   - `uproc applications invoice-ingest list-invoices [--page 1 --sort-field created_at --sort-order desc]`
-  - `uproc applications order-track list [--page 1 --sort-field created_at --sort-order desc]`
+  - `uproc applications orders tracking list [--page 1 --sort-field created_at --sort-order desc]`
   - `uproc applications module collection document-ingest documents [--page 1 --sort-field created_at --sort-order desc]`
   - `uproc applications module collection document-ingest templates [--page 1]`
   - `uproc applications module collection document-numbering folders [--page 1]`
-- KPIs: `uproc applications module overview invoice-ingest kpis` (and the same for `order-ingest`, `document-ingest`, `document-numbering`).
+- KPIs: `uproc applications module overview invoice-ingest kpis` (and the same for `orders.intake`, `ingest`, `treatments.number`).
 - Upload files: `uproc applications module upload <module_slug> <collection> <file_path>`.
 - Templates: the CLI has no dedicated template management for document-ingest; use the app.
 - Webhook: `uproc applications module webhook <module_slug> <collection> <payload_json>`.

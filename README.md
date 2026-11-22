@@ -8,7 +8,7 @@ This directory contains end-user skills organized by worker profile and day-to-d
 - Each skill is named after a real task the worker wants to complete.
 - Module names are documented inside each skill as implementation detail.
 - Skills reflect the backend reality: most modules support reading, KPIs, uploads, and webhooks; generic create operations are currently rare.
-- In this catalog, `form-generator` is the canonical name used for forms.
+- In this catalog, `forms` is the canonical name used for forms.
 - Every worker task can be executed through two access paths, and both are documented inside each `SKILL.md`:
   - `Implementation via Uproc MCP` — concrete MCP tools and semantic shortcuts.
   - `Implementation via Uproc CLI` — concrete `uproc applications` commands (dedicated business-verb commands when available, generic `module <slug> <collection>` / `module overview <slug> kpis` / `module upload` / `module webhook` otherwise).
@@ -106,13 +106,13 @@ skills/
 ## Backend notes
 
 - Most backend-exposed capabilities are `read_kpis`, `list_collections`, `read_collection_data`, `upload_files`, and `receive_webhooks`.
-- Generic external `create_collection_data` is currently available for `lead-management.leads`, `candidate-evaluation.job_openings`, `candidate-evaluation.profiles`, `candidate-evaluation.applications`, `candidate-evaluation.evaluations`, `form-generator.forms`, `form-generator.fields`, and `form-generator.submissions`.
+- Generic external `create_collection_data` is currently available for `leads.manage.leads`, `candidates.job_openings`, `candidates.profiles`, `candidates.applications`, `candidates.evaluations`, `forms.forms`, `forms.fields`, and `forms.submissions`.
 - Generic action discovery and execution are available through `module.actions` and `module.action` as the advanced MCP layer.
 - Concrete business MCP tools are the preferred worker-facing layer when available. The current concrete catalog also includes support and approval actions, order-ingest and order-track status actions, candidate profile/application creation, form publishing, email queue status actions, and process-visibility actions.
 - Skills should prefer concrete tool names first and mention generic `module.actions` or `module.action` only as fallback for advanced clients.
-- The Uproc CLI (`uproc applications`) exposes the same external API with dedicated business-verb commands for most modules: `email`, `order`, `orders-ingest`, `data-chatbot`, `forms`, `candidate`, `support`, `approval`, `campaign`, `contract`, `process`, `signals`, `editorial`, `signing`, `tax`, `documents`, `inventory`, `cases`, `invoice` (+ `invoice-lines` and `sales-invoices verifactu`), `purchase-invoices`, `sync`, `leads`, `prospecting`, `reconciliation`, and `data-process`.
-- Modules without dedicated CLI business verbs are still reachable through the generic CLI reader `uproc applications module <slug> <collection>` plus `module overview <slug> kpis`, `module upload`, and `module webhook` (this covers `invoice-ingest`, `debt-track`, the `document-*` family, `lead-intelligence`, `data-management`, `investment-analysis`, and `file-sync`).
-- The CLI has no `module create`: record creation covered by skills (for example `file-sync` transfers) is MCP-only (or via the web UI) and each affected skill documents that limit.
+- The Uproc CLI (`uproc applications`) exposes the same external API with dedicated business-verb commands for most modules: `email`, `order`, `orders-ingest`, `queries`, `forms`, `candidate`, `support`, `approval`, `campaign`, `contract`, `process`, `signals`, `editorial`, `signing`, `tax`, `documents`, `inventory`, `cases`, `invoice` (+ `invoice-lines` and `sales-invoices verifactu`), `purchases`, `sync`, `leads`, `prospecting`, `reconciliation`, and `processing`.
+- Modules without dedicated CLI business verbs are still reachable through the generic CLI reader `uproc applications module <slug> <collection>` plus `module overview <slug> kpis`, `module upload`, and `module webhook` (this covers `invoice-ingest`, `collections`, the `document-*` family, `leads.enrich`, `tables`, `investments`, and `files`).
+- The CLI has no `module create`: record creation covered by skills (for example `files` transfers) is MCP-only (or via the web UI) and each affected skill documents that limit.
 
 ## Working in this directory
 

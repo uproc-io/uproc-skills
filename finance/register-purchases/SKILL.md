@@ -10,7 +10,7 @@ Register supplier invoices and PDF/JPG tiquets (purchases), assign received invo
 
 ## Modules
 
-- `purchase-invoices`
+- `purchases` · suite `finance`
 
 ## Backend capabilities
 
@@ -38,23 +38,23 @@ Register supplier invoices and PDF/JPG tiquets (purchases), assign received invo
 ## Implementation via Uproc MCP
 
 - List/create purchases with:
-  - `module.data` on `purchase-invoices` / `purchase_invoices`
-  - `module.create` on `purchase-invoices` / `purchase_invoices`
-- Add line items with `module.create` on `purchase-invoices` / `purchase_invoice_lines`.
-- Record payments with `module.create` on `purchase-invoices` / `purchase_invoice_payments`.
-- For recurring supplier bills (e.g. rent, subscriptions), create a template with `module.create` on `purchase-invoices` / `recurring_invoices` (or `purchase-invoices.create_recurring_from_invoice` from an existing purchase) and trigger the next draft with `purchase-invoices.generate_recurring_invoice`. Generated drafts arrive as `received`.
-- Advance the lifecycle with `purchase-invoices.change_status` (arguments `item_id`, `status` `validated` or `paid`, optional `reason`).
-- Assign a received invoice to a purchase with `purchase-invoices.assign_from_ingest` (argument `invoice_id` = the received invoice id).
-- Assign several received invoices (e.g. a batch of tiquets) at once with `purchase-invoices.assign_multiple_from_ingest` (argument `parsed_invoice_ids`).
-- Find received invoices (including parsed tiquets) to assign with `module.data` on `purchase-invoices` / `invoices`.
-- Query the purchase detail (lines, payments, events, PDFs) with `module.data` on `purchase-invoices` / `purchase_invoices` (item id).
-- Send a purchase to the configured ERP with `purchase-invoices.export_to_erp` (requires `erp_sync_mode` `full` or `push`); `purchase-invoices.configure_erp_sync` sets the mode and `purchase-invoices.run_erp_sync` runs the linked data-sync workflows.
+  - `module.data` on `purchases` / `purchase_invoices`
+  - `module.create` on `purchases` / `purchase_invoices`
+- Add line items with `module.create` on `purchases` / `purchase_invoice_lines`.
+- Record payments with `module.create` on `purchases` / `purchase_invoice_payments`.
+- For recurring supplier bills (e.g. rent, subscriptions), create a template with `module.create` on `purchases` / `recurring_invoices` (or `purchases.create_recurring_from_invoice` from an existing purchase) and trigger the next draft with `purchases.generate_recurring_invoice`. Generated drafts arrive as `received`.
+- Advance the lifecycle with `purchases.change_status` (arguments `item_id`, `status` `validated` or `paid`, optional `reason`).
+- Assign a received invoice to a purchase with `purchases.assign_from_ingest` (argument `invoice_id` = the received invoice id).
+- Assign several received invoices (e.g. a batch of tiquets) at once with `purchases.assign_multiple_from_ingest` (argument `parsed_invoice_ids`).
+- Find received invoices (including parsed tiquets) to assign with `module.data` on `purchases` / `invoices`.
+- Query the purchase detail (lines, payments, events, PDFs) with `module.data` on `purchases` / `purchase_invoices` (item id).
+- Send a purchase to the configured ERP with `purchases.export_to_erp` (requires `erp_sync_mode` `full` or `push`); `purchases.configure_erp_sync` sets the mode and `purchases.run_erp_sync` runs the linked data-sync workflows.
 
 ## Implementation via Uproc CLI
 
-- Read purchases with `uproc applications purchase-invoices list [--page 1]`, `uproc applications purchase-invoices list-lines [--page 1]`, and `uproc applications purchase-invoices list-payments [--page 1]`.
-- Advance the lifecycle with `uproc applications purchase-invoices validate <id> [reason]` and `uproc applications purchase-invoices pay <id> [reason]`.
-- Assign a received invoice with `uproc applications purchase-invoices assign-from-ingest <invoice_id> [payload_json]`.
+- Read purchases with `uproc applications purchases list [--page 1]`, `uproc applications purchases list-lines [--page 1]`, and `uproc applications purchases list-payments [--page 1]`.
+- Advance the lifecycle with `uproc applications purchases validate <id> [reason]` and `uproc applications purchases pay <id> [reason]`.
+- Assign a received invoice with `uproc applications purchases assign-from-ingest <invoice_id> [payload_json]`.
 - Find received invoices (including tiquets) with the generic reader `uproc applications invoice-ingest list-invoices [--page 1]`.
 - Limit: the CLI has no `module create`, so registering a new purchase, adding lines, recording payments, or batch-assigning tiquets requires the MCP `module.create` / action tools (or the web UI). ERP sync commands are MCP-only (`configure_erp_sync` / `run_erp_sync`).
 

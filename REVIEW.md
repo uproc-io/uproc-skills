@@ -17,7 +17,7 @@ Items needing human review: technical debt, workarounds, pending decisions, scop
 
 - Date: 2026-08-18
 - Area: skills catalog
-- Item: `investment-analysis` (M17) no tiene representación en skills.
+- Item: `investments` (M17) no tiene representación en skills.
 - Reason: el módulo no expone entities ni tools concretas en el MCP (solo acceso genérico `module.kpis`/`module.data`) y el CLI tampoco tiene comandos dedicados; un skill no tendría capacidades concretas que documentar.
 - Impact: ninguna aplicación cubre análisis de inversiones vía skills hasta que el backend exponga herramientas.
 - Status: `pending`

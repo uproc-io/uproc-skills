@@ -6,9 +6,13 @@ All items grouped by date under each section.
 
 ## 2026-11-08
 
-- **Skills — actualizar CLI commands deprecated (HECHO · T2 · ~1-2d · skills)** — Fixed 31 SKILL.md files across all categories: (1) deprecated module names: `leads`→`lead-management`, `support`→`customer-care`, `cases`→`case-lifecycle`, `candidate`→`candidate-evaluation`, `contract`→`contract-lifecycle`, (2) generic path: `module <slug> <collection>` → `module collection <slug> <collection>`, (3) module name mismatches: `campaign`→`campaign-automation`, `prospect*`→`lead-prospecting`, `signals`→`market-signals`, `reconciliation`→`financial-reconciliation`, `tax`→`tax-reporting`, `process`→`process-visibility`, `documents`→`document-ingest`, `orders-ingest`→`order-ingest`, (4) `invoice`→`sales-invoices` for invoice commands, `invoice-ingest` for invoice-ingest collection access, `invoice`→`invoice-ingest` for list-invoices/list-emails. Push `c2f5580` + `b3b1148`. [skills · HECHO]
+- **Skills — actualizar CLI commands deprecated (HECHO · T2 · ~1-2d · skills)** — Fixed 31 SKILL.md files across all categories: (1) deprecated module names: `leads`→`leads.manage`, `support`→`support`, `cases`→`cases`, `candidate`→`candidates`, `contract`→`contracts`, (2) generic path: `module <slug> <collection>` → `module collection <slug> <collection>`, (3) module name mismatches: `campaign`→`campaigns`, `prospect*`→`leads.capture`, `signals`→`market`, `reconciliation`→`reconciliation`, `tax`→`tax-reporting`, `process`→`processes`, `documents`→`ingest`, `orders-ingest`→`orders.intake`, (4) `invoice`→`sales` for invoice commands, `invoice-ingest` for invoice-ingest collection access, `invoice`→`invoice-ingest` for list-invoices/list-emails. Push `c2f5580` + `b3b1148`. [skills · HECHO]
 
 ## Active
+
+### 2026-11-22
+
+- **Skills — revisar límites documentados tras el corte v3 (PENDIENTE 2026-11-22 · T1 · skills)** — Algunas skills asumen que el CLI no tiene verbos para ciertas acciones (p. ej. tratamiento por etapa, archive o investments). Tras completar los huecos de CLI, revisar los apartados "Limit" y mover capacidades de "solo MCP" a CLI cuando exista comando. `[skills]+[cli]`
 
 ### 2026-10-31
 

@@ -11,9 +11,9 @@ Review captured invoices and detect extraction problems, duplicates, or missing 
 ## Modules
 
 - `invoice-ingest`
-- `document-classifier`
-- `document-numbering`
-- `document-archiving`
+- `treatments.classify` · suite `documents`
+- `treatments.number` · suite `documents`
+- `archive` · suite `documents`
 
 ## Backend capabilities
 

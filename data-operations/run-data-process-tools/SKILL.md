@@ -10,7 +10,7 @@ Validate, clean, or enrich a dataset by running data-process tools on a single r
 
 ## Modules
 
-- `data-process`
+- `processing` · suite `data`
 
 ## Backend capabilities
 
@@ -36,18 +36,18 @@ Validate, clean, or enrich a dataset by running data-process tools on a single r
 
 ## Implementation via Uproc MCP
 
-- Search the catalog with `data-process.search` (optional query text) and open a full spec with `data-process.tool` (tool key) to see params, accepted values, format, and cost.
-- Run a single tool call with `data-process.execute` (argument `processor` = tool key, `params` = parameter object).
-- Queue a background run with `data-process.batch`: provide `tool`, `source_entity_id` (the data-management entity holding the rows), optional `column_mapping`, `fixed_values`, and `output_name`.
-- Read past runs with `module.data` on `data-process` / `runs`.
+- Search the catalog with `processing.search` (optional query text) and open a full spec with `processing.tool` (tool key) to see params, accepted values, format, and cost.
+- Run a single tool call with `processing.execute` (argument `processor` = tool key, `params` = parameter object).
+- Queue a background run with `processing.batch`: provide `tool`, `source_entity_id` (the data-management entity holding the rows), optional `column_mapping`, `fixed_values`, and `output_name`.
+- Read past runs with `module.data` on `processing` / `runs`.
 
 ## Implementation via Uproc CLI
 
-- `uproc applications data-process search [query]` — search the catalog.
-- `uproc applications data-process tool <key>` — show the full tool spec.
-- `uproc applications data-process execute <tool> [params_json]` — run a tool inline.
-- `uproc applications data-process batch <tool> <source_entity_id> [column_mapping_json] [fixed_values_json] [output_name]` — queue a background batch run.
-- `uproc applications data-process runs` — read past batch runs.
+- `uproc applications processing search [query]` — search the catalog.
+- `uproc applications processing tool <key>` — show the full tool spec.
+- `uproc applications processing execute <tool> [params_json]` — run a tool inline.
+- `uproc applications processing batch <tool> <source_entity_id> [column_mapping_json] [fixed_values_json] [output_name]` — queue a background batch run.
+- `uproc applications processing runs` — read past batch runs.
 
 ## Output
 

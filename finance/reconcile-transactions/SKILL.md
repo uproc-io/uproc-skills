@@ -10,7 +10,7 @@ Review reconciliation activity, detect unmatched movements, and focus manual eff
 
 ## Modules
 
-- `financial-reconciliation`
+- `reconciliation` · suite `finance`
 
 ## Backend capabilities
 
@@ -32,22 +32,22 @@ Review reconciliation activity, detect unmatched movements, and focus manual eff
 ## Implementation via Uproc MCP
 
 - Use the reconciliation shortcuts directly:
-  - `financial-reconciliation.entries.list`
-  - `financial-reconciliation.extracts.list`
-  - `financial-reconciliation.exports.list`
-  - `financial-reconciliation.matches.list`
-- Use `financial-reconciliation.reconcile` when the worker wants to trigger a reconciliation run for the current process.
-- Use `module.kpis` for `financial-reconciliation` when the worker wants an overview first.
+  - `reconciliation.entries.list`
+  - `reconciliation.extracts.list`
+  - `reconciliation.exports.list`
+  - `reconciliation.matches.list`
+- Use `reconciliation.reconcile` when the worker wants to trigger a reconciliation run for the current process.
+- Use `module.kpis` for `reconciliation` when the worker wants an overview first.
 - For recent activity, sort descending by `created_at` when that field exists in the target collection.
 
 ## Implementation via Uproc CLI
 
 - Read reconciliation data with:
-  - `uproc applications financial-reconciliation list-entries [--page 1]`
-  - `uproc applications financial-reconciliation list-extracts [--page 1]`
-  - `uproc applications financial-reconciliation list-exports [--page 1]`
-  - `uproc applications financial-reconciliation list-matches [--page 1]`
-- Trigger a run with `uproc applications financial-reconciliation reconcile [process_id]`.
+  - `uproc applications reconciliation list-entries [--page 1]`
+  - `uproc applications reconciliation list-extracts [--page 1]`
+  - `uproc applications reconciliation list-exports [--page 1]`
+  - `uproc applications reconciliation list-matches [--page 1]`
+- Trigger a run with `uproc applications reconciliation reconcile [process_id]`.
 - KPIs: `uproc applications module overview financial-reconciliation kpis`.
 
 ## Output

@@ -10,7 +10,7 @@ Monitor the document unification pipeline: review how documents are being matche
 
 ## Modules
 
-- `document-unification`
+- `treatments.unify` · suite `documents`
 
 ## Backend capabilities
 
@@ -33,10 +33,10 @@ Monitor the document unification pipeline: review how documents are being matche
 
 ## Implementation via Uproc MCP
 
-- Read the overview with `module.kpis` on `document-unification`.
-- Read folder rows with `document-unification.folders.list` (or `.get` / `.search` with the same aliases).
-- Upload a new file with `document-unification.folders.upload` (`file_name` + base64 `content`).
-- Send a webhook payload with `document-unification.folders.webhook` (`raw`, `text`, `message`, `reply_callback`).
+- Read the overview with `module.kpis` on `treatments.unify`.
+- Read folder rows with `treatments.unify.folders.list` (or `.get` / `.search` with the same aliases).
+- Upload a new file with `treatments.unify.folders.upload` (`file_name` + base64 `content`).
+- Send a webhook payload with `treatments.unify.folders.webhook` (`raw`, `text`, `message`, `reply_callback`).
 - Limit: the unification module exposes the single `folders` collection (read/upload/webhook); there are no dedicated unification action tools in MCP yet.
 
 ## Implementation via Uproc CLI

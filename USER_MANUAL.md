@@ -84,13 +84,13 @@ Each `SKILL.md` lists the concrete MCP tools and CLI commands for its task in th
 
 - Use for: reviewing received invoices and their extraction/capture state.
 - Typical outcome: invoice intake summary and list of records needing manual review.
-- Also covers: sending issued invoices to an ERP (`sales-invoices.export_to_erp`) and VeriFactu (Spain) registration management (download XML, resubmit, backfill).
+- Also covers: sending issued invoices to an ERP (`sales.export_to_erp`) and VeriFactu (Spain) registration management (download XML, resubmit, backfill).
 
 #### `finance/register-purchases`
 
 - Use for: registering supplier invoices (purchases), assigning received invoices from invoice-ingest, and tracking the purchase lifecycle (received → validated → paid).
 - Typical outcome: purchase records with lines, payments, and current status.
-- Also covers: sending purchases to an ERP (`purchase-invoices.export_to_erp`).
+- Also covers: sending purchases to an ERP (`purchases.export_to_erp`).
 
 #### `finance/reconcile-transactions`
 

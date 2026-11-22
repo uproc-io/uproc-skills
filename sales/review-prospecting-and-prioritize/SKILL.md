@@ -10,9 +10,9 @@ Review prospecting results and focus effort on the best opportunities.
 
 ## Modules
 
-- `lead-prospecting`
-- `lead-intelligence`
-- `campaign-automation`
+- `leads.capture` · suite `sales`
+- `leads.enrich` · suite `sales`
+- `campaigns` · suite `sales`
 
 ## Backend capabilities
 
@@ -33,28 +33,28 @@ Review prospecting results and focus effort on the best opportunities.
 ## Implementation via Uproc MCP
 
 - Use:
-  - `lead-prospecting.strategies.list`
-  - `lead-prospecting.opportunities.list`
-  - `lead-prospecting.prospects.list`
-  - `lead-prospecting.executions.list`
-  - `lead-intelligence.duplicates.list`
-  - `lead-intelligence.sync_logs.list`
-  - `campaign-automation.campaigns.list`
-  - `campaign-automation.audiences.list`
-- Trigger `lead-prospecting.run_discovery` when the worker wants to launch a new discovery run from an existing strategy.
-- Use `lead-prospecting.send_opportunity_to_leads` when an opportunity should be converted into the lead workflow.
+  - `leads.capture.strategies.list`
+  - `leads.capture.opportunities.list`
+  - `leads.capture.prospects.list`
+  - `leads.capture.executions.list`
+  - `leads.enrich.duplicates.list`
+  - `leads.enrich.sync_logs.list`
+  - `campaigns.campaigns.list`
+  - `campaigns.audiences.list`
+- Trigger `leads.capture.run_discovery` when the worker wants to launch a new discovery run from an existing strategy.
+- Use `leads.capture.send_opportunity_to_leads` when an opportunity should be converted into the lead workflow.
 - Use `module.kpis` on prospecting or campaign modules when the worker wants a compact summary first.
 
 ## Implementation via Uproc CLI
 
 - Read prospecting context with:
-  - `uproc applications lead-prospecting list-strategies [--page 1]`
-  - `uproc applications lead-prospecting list-opportunities [--page 1]`
-  - `uproc applications lead-prospecting list-prospects [--page 1]`
-  - `uproc applications lead-prospecting list-executions [--page 1]`
-- Launch a discovery run with `uproc applications lead-prospecting run-discovery <strategy_id> [company] [domain]`.
-- Convert an opportunity into the lead workflow with `uproc applications lead-prospecting send-to-leads <opportunity_id>`.
-- Read campaign context with `uproc applications campaign-automation list [--page 1]` and `uproc applications campaign-automation list-audiences [--page 1]`.
+  - `uproc applications leads capture list-strategies [--page 1]`
+  - `uproc applications leads capture list-opportunities [--page 1]`
+  - `uproc applications leads capture list-prospects [--page 1]`
+  - `uproc applications leads capture list-executions [--page 1]`
+- Launch a discovery run with `uproc applications leads capture run-discovery <strategy_id> [company] [domain]`.
+- Convert an opportunity into the lead workflow with `uproc applications leads capture send-to-leads <opportunity_id>`.
+- Read campaign context with `uproc applications campaigns list [--page 1]` and `uproc applications campaigns list-audiences [--page 1]`.
 - Lead-intelligence reads use the generic reader: `uproc applications module collection lead-intelligence duplicates [--page 1]` / `uproc applications module collection lead-intelligence sync_logs [--page 1]`.
 
 ## Output

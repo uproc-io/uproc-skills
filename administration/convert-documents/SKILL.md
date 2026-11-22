@@ -10,7 +10,7 @@ Monitor the document conversion pipeline: review processed and failed conversion
 
 ## Modules
 
-- `document-conversion`
+- `treatments.convert` · suite `documents`
 
 ## Backend capabilities
 
@@ -33,10 +33,10 @@ Monitor the document conversion pipeline: review processed and failed conversion
 
 ## Implementation via Uproc MCP
 
-- Read the overview with `module.kpis` on `document-conversion`.
-- Read folder rows with `document-conversion.folders.list` (or `.get` / `.search` with the same aliases).
-- Upload a new file with `document-conversion.folders.upload` (`file_name` + base64 `content`).
-- Send a webhook payload with `document-conversion.folders.webhook` (`raw`, `text`, `message`, `reply_callback`).
+- Read the overview with `module.kpis` on `treatments.convert`.
+- Read folder rows with `treatments.convert.folders.list` (or `.get` / `.search` with the same aliases).
+- Upload a new file with `treatments.convert.folders.upload` (`file_name` + base64 `content`).
+- Send a webhook payload with `treatments.convert.folders.webhook` (`raw`, `text`, `message`, `reply_callback`).
 - Limit: the conversion module exposes the single `folders` collection (read/upload/webhook); there are no dedicated conversion action tools in MCP yet.
 
 ## Implementation via Uproc CLI

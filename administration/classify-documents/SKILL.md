@@ -10,7 +10,7 @@ Keep the document classification pipeline healthy: review what has been classifi
 
 ## Modules
 
-- `document-classifier`
+- `treatments.classify` · suite `documents`
 
 ## Backend capabilities
 
@@ -33,10 +33,10 @@ Keep the document classification pipeline healthy: review what has been classifi
 
 ## Implementation via Uproc MCP
 
-- Read the overview with `module.kpis` on `document-classifier`.
-- Read folder rows with `document-classifier.folders.list` (or `.get` / `.search` with the same aliases).
-- Upload a new file with `document-classifier.folders.upload` (`file_name` + base64 `content`).
-- Send a webhook payload with `document-classifier.folders.webhook` (`raw`, `text`, `message`, `reply_callback`).
+- Read the overview with `module.kpis` on `treatments.classify`.
+- Read folder rows with `treatments.classify.folders.list` (or `.get` / `.search` with the same aliases).
+- Upload a new file with `treatments.classify.folders.upload` (`file_name` + base64 `content`).
+- Send a webhook payload with `treatments.classify.folders.webhook` (`raw`, `text`, `message`, `reply_callback`).
 - Limit: the classifier exposes the single `folders` collection (read/upload/webhook); there are no dedicated classification action tools in MCP yet.
 
 ## Implementation via Uproc CLI

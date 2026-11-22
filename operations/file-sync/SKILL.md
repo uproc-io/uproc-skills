@@ -19,15 +19,15 @@ between SFTP, S3, Dropbox or Google Drive.
 
 ## Implementation via Uproc MCP
 
-- List configured transfers with `module.data` on `file-sync` / `transfers`.
-- List past runs with `module.data` on `file-sync` / `runs` (and per-file logs
-  on `file-sync` / `run_files`).
-- Create a transfer with `module.create` on `file-sync` / `transfers`:
+- List configured transfers with `module.data` on `files` / `transfers`.
+- List past runs with `module.data` on `files` / `runs` (and per-file logs
+  on `files` / `run_files`).
+- Create a transfer with `module.create` on `files` / `transfers`:
   provide `name`, `source_credential_id`, `source_folder`, `source_pattern`
   (e.g. `*.csv`), `recursive`, `destination_credential_id`, `destination_folder`,
   `overwrite`, `enabled`, `trigger_type` (`scheduled` or `manual`) and
   `interval` (hourly/daily/weekly/monthly).
-- Run a transfer now with the concrete tool `file-sync.run_transfer`
+- Run a transfer now with the concrete tool `files.run_transfer`
   (argument `transfer_id`). Scheduled transfers also run automatically on the
   configured interval.
 
@@ -39,4 +39,4 @@ between SFTP, S3, Dropbox or Google Drive.
 - KPIs: `uproc applications module overview file-sync kpis`.
 - Limit: the CLI has no `module create` and no `run_transfer` command, so
   creating a transfer or running it now requires the MCP tools
-  (`module.create` / `file-sync.run_transfer`) or the web UI.
+  (`module.create` / `files.run_transfer`) or the web UI.

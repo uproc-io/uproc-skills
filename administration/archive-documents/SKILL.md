@@ -10,7 +10,7 @@ Manage the document archiving folders: review what has been archived, detect fai
 
 ## Modules
 
-- `document-archiving`
+- `archive` · suite `documents`
 
 ## Backend capabilities
 
@@ -33,10 +33,10 @@ Manage the document archiving folders: review what has been archived, detect fai
 
 ## Implementation via Uproc MCP
 
-- Read the overview with `module.kpis` on `document-archiving`.
-- Read folder rows with `document-archiving.folders.list` (or `.get` / `.search` with the same aliases).
-- Upload a new file with `document-archiving.folders.upload` (`file_name` + base64 `content`).
-- Send a webhook payload with `document-archiving.folders.webhook` (`raw`, `text`, `message`, `reply_callback`).
+- Read the overview with `module.kpis` on `archive`.
+- Read folder rows with `archive.folders.list` (or `.get` / `.search` with the same aliases).
+- Upload a new file with `archive.folders.upload` (`file_name` + base64 `content`).
+- Send a webhook payload with `archive.folders.webhook` (`raw`, `text`, `message`, `reply_callback`).
 - Limit: the archiving module exposes the single `folders` collection (read/upload/webhook); there are no dedicated archive action tools in MCP yet.
 
 ## Implementation via Uproc CLI
