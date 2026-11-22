@@ -45,7 +45,7 @@ Keep the document classification pipeline healthy: review what has been classifi
 - Read rows: `uproc applications module collection document-classifier folders [--page 1 --sort-field key --sort-order asc --filter-field key --filter-value val]`.
 - Upload: `uproc applications module upload document-classifier folders <file_path>`.
 - Webhook: `uproc applications module webhook document-classifier folders <payload_json>`.
-- Process a folder with `uproc applications treatments classify process <process_id>` and retry it with `uproc applications treatments classify retry <folder_id>`.
+- Upload files with `uproc applications treatments classify upload <process_id> <files...>`, process the folder with `uproc applications treatments classify process <process_id>` and retry it with `uproc applications treatments classify retry <folder_id>`.
 
 ## Output
 

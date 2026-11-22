@@ -45,7 +45,7 @@ Manage the document archiving folders: review what has been archived, detect fai
 - Read rows: `uproc applications module collection document-archiving folders [--page 1 --sort-field key --sort-order asc --filter-field key --filter-value val]`.
 - Upload: `uproc applications module upload document-archiving folders <file_path>`.
 - Webhook: `uproc applications module webhook document-archiving folders <payload_json>`.
-- Process a folder with `uproc applications archive process <process_id>` and retry it with `uproc applications archive retry <folder_id>`.
+- Upload files with `uproc applications archive upload <process_id> <files...>`, process the folder with `uproc applications archive process <process_id>` and retry it with `uproc applications archive retry <folder_id>`.
 
 ## Output
 

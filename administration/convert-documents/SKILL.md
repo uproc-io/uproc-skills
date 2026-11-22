@@ -45,7 +45,7 @@ Monitor the document conversion pipeline: review processed and failed conversion
 - Read rows: `uproc applications module collection document-conversion folders [--page 1 --sort-field key --sort-order asc --filter-field key --filter-value val]`.
 - Upload: `uproc applications module upload document-conversion folders <file_path>`.
 - Webhook: `uproc applications module webhook document-conversion folders <payload_json>`.
-- Process a folder with `uproc applications treatments convert process <process_id>` and retry it with `uproc applications treatments convert retry <folder_id>`.
+- Upload files with `uproc applications treatments convert upload <process_id> <files...>`, process the folder with `uproc applications treatments convert process <process_id>` and retry it with `uproc applications treatments convert retry <folder_id>`.
 
 ## Output
 
