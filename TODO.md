@@ -12,6 +12,10 @@ All items grouped by date under each section.
 
 ### 2026-11-22
 
+- **Skills — revisar skills de módulos con workflow pendiente (PENDIENTE 2026-11-22 · T2 · skills)** — `investments` y `files` ya tienen skill; valorar skills propias para `archive` (hoy cubierto en administration) y `reports` (hoy en leadership) si el producto quiere flujos dedicados. `[skills]`
+
+### 2026-11-22
+
 ### 2026-10-31
 
 - **Skills — Campaign Automation: newsletter interno omnicanal (PENDIENTE · complejidad: T1 · ~0.5d · skills · plan: `../backend/docs/plans/campaign-automation-internal-newsletter.md`)** — Cuando back/front cierren F1–F9, revisar y actualizar las skills de worker (marketing/sales/operations) para reflejar el flujo completo: setup de canal/proveedor → campaña recurrente → contenido IA → aprobación → programación → tracking/rebotes/SMS. Documentar qué es externo vs interno y qué evidencias debe recoger el worker. [skills]

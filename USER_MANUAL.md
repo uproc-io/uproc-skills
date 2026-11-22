@@ -102,6 +102,11 @@ Each `SKILL.md` lists the concrete MCP tools and CLI commands for its task in th
 - Use for: monitoring collections, reminders, and unpaid invoices.
 - Typical outcome: overdue list and recommended follow-up actions.
 
+#### `finance/review-investments`
+
+- Use for: reviewing investment scenarios and reports before a decision.
+- Typical outcome: expected return, risk, capital allocation and the latest report with a recommended next action.
+
 #### `finance/prepare-tax-reporting`
 
 - Use for: reviewing tax reporting readiness and reporting outputs.

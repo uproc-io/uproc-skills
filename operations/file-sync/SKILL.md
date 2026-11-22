@@ -12,6 +12,10 @@ between SFTP, S3, Dropbox or Google Drive.
 - A transfer is already configured and only needs to be run now, or a new
   transfer must be created.
 
+## Modules
+
+- `files` · suite `data`
+
 ## Prerequisites
 
 - Credentials of type storage (SFTP / S3 / Dropbox / Google Drive) for source

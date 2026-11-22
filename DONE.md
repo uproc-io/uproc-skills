@@ -1,5 +1,9 @@
 ## 2026-11-22
 
+- **Skills — paridad de módulos v3 (HECHO 2026-11-22 · T1 · skills)** — Añadido `finance/review-investments` (escenarios e informes de inversión, MCP `module.data` + CLI `applications investments list-scenarios|list-reports`), `Modules` a `operations/file-sync` (`files` · data) y `reports` al skill de KPIs con `reports.weekly.get|periods` y `applications reports weekly`. Cobertura: los 31 módulos expuestos de v3 aparecen al menos en una skill. `[skills]`
+
+## 2026-11-22
+
 - **Skills — superficie v3 en CLI y MCP (HECHO 2026-11-22 · T2 · skills)** — 34 `SKILL.md` migradas a las claves v3 (`purchases`, `templates`, `ingest`, `processing`, `tables`, `connectors`, `files`, `queries`, `processes`, `taxes`, …), con grupos anidados en CLI (`leads capture|enrich|manage`, `orders intake|tracking`, `treatments classify|convert|unify|number`) y nombres MCP `<surface_key>.<acción>` (`leads.capture.*`, `treatments.classify.*`). Cada sección `Modules` lleva clave + suite. Nuevo `scripts/check_skill_surface.py` (falla con tokens/slugs v2). Documentadas las acciones `process`/`retry` de treatments y archive. README, USER_MANUAL y este tracking actualizados. `[skills]`
 
 # DONE

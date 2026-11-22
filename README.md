@@ -56,6 +56,7 @@ skills/
 - `P0` `finance/reconcile-transactions`
 - `P0` `finance/track-payments-and-overdues`
 - `P1` `finance/prepare-tax-reporting`
+- `P1` `finance/review-investments`
 
 ### support
 

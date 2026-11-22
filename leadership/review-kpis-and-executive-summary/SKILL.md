@@ -12,6 +12,7 @@ Summarize business KPIs across relevant modules and highlight where attention is
 
 - `processes` · suite `operations`
 - `queries` · suite `cross`
+- `reports` · suite `cross`
 - Any business module with KPIs relevant to the request
 
 ## Backend capabilities
@@ -36,6 +37,7 @@ Summarize business KPIs across relevant modules and highlight where attention is
 - Query summaries with `module.kpis` on the resolved modules.
 - Use `module.data` only for the few supporting collections needed to explain a KPI change.
 - Use `queries.queries.list` if the worker wants visibility into recent analytical questions.
+- Read the weekly business/system report with `reports.weekly.get` (`kind`) and list available periods with `reports.weekly.periods`.
 
 ## Implementation via Uproc CLI
 
@@ -43,6 +45,7 @@ Summarize business KPIs across relevant modules and highlight where attention is
 - Query summaries with `uproc applications module overview <module_slug> kpis` for each resolved module.
 - Drill into the few supporting collections with `uproc applications module collection <module_slug> <collection> [--page 1]`.
 - Inspect recent analytical questions with `uproc applications queries list [--page 1]`.
+- Read the weekly report with `uproc applications reports weekly [--kind system|customer]` and list periods with `uproc applications reports weekly-periods`.
 
 ## Output
 
