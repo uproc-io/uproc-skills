@@ -50,6 +50,10 @@ Review reconciliation activity, detect unmatched movements, and focus manual eff
 - Trigger a run with `uproc applications reconciliation reconcile [process_id]`.
 - KPIs: `uproc applications module overview financial-reconciliation kpis`.
 
+- Groups/requirements: `module.action` on `reconciliation` with `list_groups`, `create_group`, `get_group`, `update_group`, `group_defaults`, `group_files`, `group_runs` and `start_group_run`.
+- Import and contract: `preview_columns`, `import_with_mapping`, `extract_ai_list`/`extract_ai_apply`, `bank_templates_list` / `bank_template_create|update|delete`, `contract_export` / `contract_import_preview|apply` / `contract_template`.
+- CLI equivalent: `uproc applications module action financial-reconciliation <action> '<json>'`.
+
 ## Output
 
 - Reconciliation summary.

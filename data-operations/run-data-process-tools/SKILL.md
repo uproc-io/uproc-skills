@@ -49,6 +49,10 @@ Validate, clean, or enrich a dataset by running data-process tools on a single r
 - `uproc applications processing batch <tool> <source_entity_id> [column_mapping_json] [fixed_values_json] [output_name]` — queue a background batch run.
 - `uproc applications processing runs` — read past batch runs.
 
+- Pipeline copilot: `module.action` on `processing` with `pipeline-suggest` (`goal`), `pipeline-explain` (`steps`) and `pipeline-dry-run` (`steps`, optional `entity_slug`/`meta`) before running.
+- Data quality: `quality-report` (`entity_id` or `file_name` + `content`) for a read-only per-column report.
+- CLI equivalent: `uproc applications module action data-process pipeline-suggest '<json>'` and the same pattern for the rest.
+
 ## Output
 
 - Tool result for the single call.

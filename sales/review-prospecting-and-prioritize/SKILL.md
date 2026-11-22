@@ -57,6 +57,9 @@ Review prospecting results and focus effort on the best opportunities.
 - Read campaign context with `uproc applications campaigns list [--page 1]` and `uproc applications campaigns list-audiences [--page 1]`.
 - Lead-intelligence reads use the generic reader: `uproc applications module collection lead-intelligence duplicates [--page 1]` / `uproc applications module collection lead-intelligence sync_logs [--page 1]`.
 
+- Enrichment runs: `module.action` on `leads.capture`-scope module `lead-prospecting` with `enrichment_settings_get|update`, `enrichment_run` (`prospect_ids`, optional `pipeline_keys`), `enrichment_runs` (`prospect_id`, `limit`) and `enrichment_cancel` (`run_id`).
+- CLI equivalent: `uproc applications module action lead-prospecting enrichment-run '<json>'` (misma acción para settings/runs/cancel).
+
 ## Output
 
 - Prospecting summary.

@@ -71,7 +71,8 @@ Review synchronization and enrichment activity and prepare the next operational 
 - Read data-management tables with the generic reader: `uproc applications module collection data-management entities [--page 1]` (and per-entity collections as configured).
 - KPIs: `uproc applications module overview data-sync kpis`, `uproc applications module overview data-management kpis`.
 - Forms lifecycle with `uproc applications forms list [--page 1]`, `uproc applications forms list-fields [--page 1]`, `uproc applications forms list-submissions [--page 1]`, `uproc applications forms publish <form_id>`, `uproc applications forms archive <form_id>`, `uproc applications forms archive-submission <submission_id>`, `uproc applications forms restore <form_id>`, and `uproc applications forms mark-submission-processed <submission_id>`.
-- Limits: the data-management normalization/smart-import flow and `connectors` ERP workflow creation (`module.create`) are MCP-only; the CLI covers workflow run/preview/dry-run and ERP push verbs.
+- Normalization operations and limits: `module.action` on `tables` with `operations_list`, `operation_get`, `settings_limits`, `merge_entities` and `execute_bulk_delete` (preview first with `preview_bulk_delete`).
+- CLI equivalent: `uproc applications module action data-management <action> '<json>'`; `connectors` ERP workflow creation still uses the generic `module.create` contract.
 
 ## Output
 

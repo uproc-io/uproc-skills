@@ -59,8 +59,10 @@ Review campaign and audience data before activation or optimization.
 - Read prospecting context with `uproc applications leads capture list-opportunities [--page 1]` and `uproc applications leads capture list-prospects [--page 1]`.
 - Schedule recurring runs: `uproc applications campaigns schedule-add <campaign_id> --recurrence '{"freq":"weekly","weekday":"mon","hour":8}' [--name weekly --stop-after 5]`, then `schedule-list`, `schedule-update <schedule_id> [--active true]`, `schedule-delete <schedule_id>`.
 - Review suppressions and provider sync: `suppressions [--channel email]`, `suppression-add <channel> <recipient> --reason manual`, `sync-push <campaign_id>` (creates provider drafts), `sync-pull <campaign_id>`, `sync-status <campaign_id>`, and `sms-report <campaign_id>`.
-- Important: campaign content generated with AI (F2) must be **approved** by a human before the runner dispatches it.
-- Limit: the campaign AI plan flow (`analyze_plan`/`execute_plan`) and `import_audience_csv` / `record_execution_event` are MCP-only; the CLI covers campaign lifecycle verbs plus schedules, suppressions, provider sync and delivery reports.
+- Generate channel content with `module.action` (`campaigns` `content_generate`: `campaign_id`, `brief`, optional `tone`/`channels`), review it with `content_get` and approve it with `content_approve` (`channel`, `approved`). AI content must be approved by a human before dispatch.
+- Inspect audience sources with `module.action` (`campaigns` `data_sources`) and preview a table mapping with `preview_audience` (`entity_id`, `column_map`).
+- Provider sync and reports: `sync_push`, `sync_pull`, `sync_status` and `sms_report` (+ `sms_report_csv`) per campaign.
+- CLI equivalent: `uproc applications module action campaign-automation <action> '<json>'` for all of the above; the dedicated verbs cover lifecycle, schedules, suppressions and sync.
 
 ## Output
 

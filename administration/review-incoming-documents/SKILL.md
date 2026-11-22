@@ -75,6 +75,9 @@ Review incoming business documents and identify what needs validation, correctio
 - Webhook: `uproc applications module webhook <module_slug> <collection> <payload_json>`.
 - Reprocessing a document is an in-app session action (`POST /api/v1/modules/document-ingest/actions/reprocess`); it is not exposed as an MCP/CLI tool yet.
 
+- Setup helpers: `module.action` on `ingest` with `get_email_alias` / `update_email_alias`, `data_sync_workflows` and `template_schema` (`document_type`).
+- CLI equivalent: `uproc applications module action document-ingest <action> '<json>'`.
+
 ## Output
 
 - Short summary.
