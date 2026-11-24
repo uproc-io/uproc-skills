@@ -18,6 +18,7 @@ This directory contains end-user skills organized by worker profile and day-to-d
 
 - Every task can be executed through **Uproc MCP** (AI clients such as OpenCode, Claude Code, or Codex) or the **Uproc CLI** (`uproc applications`).
 - How to configure both paths and where the required values (user email and user API key) come from is explained in `USER_MANUAL.md` → "Setting up access (MCP and CLI)".
+- When the Uproc MCP server exposes the Skills extension, clients discover this catalog with `skills/list` and read each file with `resources/read`. This repository remains the source of truth; docs and clients do not need a copy of the skills.
 
 ## Structure
 
