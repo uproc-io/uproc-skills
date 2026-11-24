@@ -1,3 +1,8 @@
+---
+name: "send-proposal-and-follow-up"
+description: "Send a proposal with the right message and define the immediate follow-up plan."
+---
+
 # Send Proposal And Follow Up
 
 ## Profile

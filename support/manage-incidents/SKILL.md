@@ -1,3 +1,8 @@
+---
+name: "manage-incidents"
+description: "Review tickets and cases, prioritize them, and prepare next actions."
+---
+
 # Manage Incidents
 
 ## Profile

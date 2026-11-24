@@ -1,3 +1,8 @@
+---
+name: "track-hiring-process"
+description: "Review recruitment progress and identify blocked stages or pending actions."
+---
+
 # Track Hiring Process
 
 ## Profile

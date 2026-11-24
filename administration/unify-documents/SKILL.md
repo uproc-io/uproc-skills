@@ -1,3 +1,8 @@
+---
+name: "unify-documents"
+description: "Monitor the document unification pipeline: review how documents are being matched and deduplicated, detect failures, and submit new files for unification."
+---
+
 # Unify Documents
 
 ## Profile

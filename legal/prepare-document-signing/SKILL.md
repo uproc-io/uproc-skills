@@ -1,3 +1,8 @@
+---
+name: "prepare-document-signing"
+description: "Prepare a signing workflow and review pending signature requests."
+---
+
 # Prepare Document Signing
 
 ## Profile

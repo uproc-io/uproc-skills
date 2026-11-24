@@ -1,3 +1,8 @@
+---
+name: "review-invoices-and-capture"
+description: "Compare received invoice capture with issued invoice records and identify gaps or inconsistencies."
+---
+
 # Review Invoices And Capture
 
 ## Profile

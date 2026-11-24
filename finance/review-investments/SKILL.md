@@ -1,3 +1,8 @@
+---
+name: "review-investments"
+description: "Review investment scenarios and their reports, compare expected returns and risk, and prepare the next decision."
+---
+
 # Review Investments
 
 ## Profile

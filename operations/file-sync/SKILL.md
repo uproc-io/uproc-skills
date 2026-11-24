@@ -1,3 +1,8 @@
+---
+name: "file-sync"
+description: "Copy files from a source storage provider to a destination storage provider, overwriting the destination. Useful to distribute exports, mirrors or backups between SFTP, S3, Dropbox or Google Drive."
+---
+
 # File Sync (copy files between storage providers)
 
 Copy files from a source storage provider to a destination storage provider,

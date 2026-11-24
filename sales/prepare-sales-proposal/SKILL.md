@@ -1,3 +1,8 @@
+---
+name: "prepare-sales-proposal"
+description: "Prepare a proposal workflow from an existing lead using the backend actions available in lead management."
+---
+
 # Prepare Sales Proposal
 
 ## Profile

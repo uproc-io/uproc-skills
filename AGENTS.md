@@ -27,6 +27,7 @@ Structure
 - One skill per directory.
 - Skill directories should use kebab-case names.
 - The main entry file for a skill should be `SKILL.md`.
+- Every `SKILL.md` must start with YAML frontmatter: `name` (equal to the skill directory) and `description` (one sentence, no line breaks).
 - Supporting assets should live next to the skill, using descriptive names.
 - `README.md` documents the folder-level conventions and should stay in sync with the current structure.
 

@@ -1,3 +1,8 @@
+---
+name: "review-kpis-and-executive-summary"
+description: "Summarize business KPIs across relevant modules and highlight where attention is needed."
+---
+
 # Review KPIs And Executive Summary
 
 ## Profile

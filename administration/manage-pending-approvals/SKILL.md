@@ -1,3 +1,8 @@
+---
+name: "manage-pending-approvals"
+description: "Review pending approval requests and prepare a decision-ready summary."
+---
+
 # Manage Pending Approvals
 
 ## Profile

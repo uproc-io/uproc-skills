@@ -1,3 +1,8 @@
+---
+name: "register-purchases"
+description: "Register supplier invoices and PDF/JPG tiquets (purchases), assign received invoices from ingestion, and track the purchase lifecycle until payment."
+---
+
 # Register Purchases
 
 ## Profile

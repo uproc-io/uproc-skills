@@ -1,3 +1,8 @@
+---
+name: "review-signals-and-activations"
+description: "Review external market signals and see which ones became activations or actions."
+---
+
 # Review Signals And Activations
 
 ## Profile

@@ -1,3 +1,7 @@
+## 2026-11-24
+
+- **Skills — frontmatter Agent Skills en los 35 `SKILL.md` (HECHO 2026-11-24 · T1 · skills)** — Añadido `name` (igual al directorio) y `description` (desde `## Goal`, o primer párrafo) a todo el catálogo. El servidor MCP ya puede servir los archivos tal cual; la síntesis queda solo como fallback. `[skills]`
+
 ## 2026-11-22
 
 - **Skills — paridad de módulos v3 (HECHO 2026-11-22 · T1 · skills)** — Añadido `finance/review-investments` (escenarios e informes de inversión, MCP `module.data` + CLI `applications investments list-scenarios|list-reports`), `Modules` a `operations/file-sync` (`files` · data) y `reports` al skill de KPIs con `reports.weekly.get|periods` y `applications reports weekly`. Cobertura: los 31 módulos expuestos de v3 aparecen al menos en una skill. `[skills]`

@@ -1,3 +1,8 @@
+---
+name: "prepare-campaigns-and-audiences"
+description: "Review campaign and audience data before activation or optimization."
+---
+
 # Prepare Campaigns And Audiences
 
 ## Profile

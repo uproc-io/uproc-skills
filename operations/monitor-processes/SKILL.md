@@ -1,3 +1,8 @@
+---
+name: "monitor-processes"
+description: "Review process visibility signals and identify what needs intervention."
+---
+
 # Monitor Processes
 
 ## Profile

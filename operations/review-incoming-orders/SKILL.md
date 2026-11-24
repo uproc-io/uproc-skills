@@ -1,3 +1,8 @@
+---
+name: "review-incoming-orders"
+description: "Review newly ingested orders and decide what needs follow-up."
+---
+
 # Review Incoming Orders
 
 ## Profile

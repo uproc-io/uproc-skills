@@ -1,3 +1,8 @@
+---
+name: "review-incoming-documents"
+description: "Review incoming business documents and identify what needs validation, correction, or routing."
+---
+
 # Review Incoming Documents
 
 ## Profile

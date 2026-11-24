@@ -1,3 +1,8 @@
+---
+name: "review-prospecting-and-prioritize"
+description: "Review prospecting results and focus effort on the best opportunities."
+---
+
 # Review Prospecting And Prioritize
 
 ## Profile

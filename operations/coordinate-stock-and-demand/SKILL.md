@@ -1,3 +1,8 @@
+---
+name: "coordinate-stock-and-demand"
+description: "Review inventory planning inputs and summarize replenishment pressure."
+---
+
 # Coordinate Stock And Demand
 
 ## Profile

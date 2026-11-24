@@ -28,7 +28,7 @@ skills/
   USER_MANUAL.md
   administration/
     review-incoming-documents/
-      SKILL.md
+      SKILL.md        # starts with YAML frontmatter: name + description
 ```
 
 ## Priority model
@@ -119,6 +119,7 @@ skills/
 
 - Add one directory per skill.
 - Keep each `SKILL.md` short, operational, and worker-facing.
+- Start each `SKILL.md` with YAML frontmatter: `name` matching the folder and a one-line `description`. MCP clients use it to discover and select skills.
 - Include an `Implementation via Uproc MCP` section with the exact tools or shortcuts to use and any capability gaps.
 - When backend capabilities change, update the affected skills and this catalog in the same change set.
 - Keep `USER_MANUAL.md` aligned with the current catalog so end users have a single overview of all available skills.

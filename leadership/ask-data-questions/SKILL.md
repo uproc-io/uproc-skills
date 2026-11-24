@@ -1,3 +1,8 @@
+---
+name: "ask-data-questions"
+description: "Answer business questions in natural language and ground them in available data context."
+---
+
 # Ask Data Questions
 
 ## Profile

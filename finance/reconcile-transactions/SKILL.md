@@ -1,3 +1,8 @@
+---
+name: "reconcile-transactions"
+description: "Review reconciliation activity, detect unmatched movements, and focus manual effort where needed."
+---
+
 # Reconcile Transactions
 
 ## Profile

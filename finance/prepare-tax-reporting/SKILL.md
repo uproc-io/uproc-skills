@@ -1,3 +1,8 @@
+---
+name: "prepare-tax-reporting"
+description: "Review available tax reports and identify what should be validated before filing or export."
+---
+
 # Prepare Tax Reporting
 
 ## Profile

@@ -1,3 +1,8 @@
+---
+name: "track-orders-and-report-issues"
+description: "Review order status and prepare customer communication when delays or issues appear."
+---
+
 # Track Orders And Report Issues
 
 ## Profile

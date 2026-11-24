@@ -1,3 +1,8 @@
+---
+name: "review-candidates"
+description: "Review candidates, applications, and evaluations for current hiring processes."
+---
+
 # Review Candidates
 
 ## Profile

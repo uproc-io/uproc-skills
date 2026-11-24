@@ -1,3 +1,8 @@
+---
+name: "review-active-and-expiring-contracts"
+description: "Review contracts, identify upcoming expirations, and prepare the next action."
+---
+
 # Review Active And Expiring Contracts
 
 ## Profile

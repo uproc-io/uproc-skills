@@ -1,3 +1,8 @@
+---
+name: "draft-customer-replies"
+description: "Draft clear emails for confirmations, requests for information, follow-ups, and issue responses."
+---
+
 # Draft Customer Replies
 
 ## Profile

@@ -1,3 +1,8 @@
+---
+name: "convert-documents"
+description: "Monitor the document conversion pipeline: review processed and failed conversions, and submit new files for conversion."
+---
+
 # Convert Documents
 
 ## Profile

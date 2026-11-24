@@ -1,3 +1,8 @@
+---
+name: "create-and-qualify-leads"
+description: "Create new leads when needed and organize the first qualification pass."
+---
+
 # Create And Qualify Leads
 
 ## Profile

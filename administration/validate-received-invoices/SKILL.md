@@ -1,3 +1,8 @@
+---
+name: "validate-received-invoices"
+description: "Review captured invoices and detect extraction problems, duplicates, or missing data before downstream processing."
+---
+
 # Validate Received Invoices
 
 ## Profile

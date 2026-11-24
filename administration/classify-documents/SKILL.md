@@ -1,3 +1,8 @@
+---
+name: "classify-documents"
+description: "Keep the document classification pipeline healthy: review what has been classified, route or fix unprocessed documents, and upload new files for classification."
+---
+
 # Classify Documents
 
 ## Profile

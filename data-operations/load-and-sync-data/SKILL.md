@@ -1,3 +1,8 @@
+---
+name: "load-and-sync-data"
+description: "Review synchronization and enrichment activity and prepare the next operational step."
+---
+
 # Load And Sync Data
 
 ## Profile

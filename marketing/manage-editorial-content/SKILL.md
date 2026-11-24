@@ -1,3 +1,8 @@
+---
+name: "manage-editorial-content"
+description: "Review editorial work queues and focus on the highest-value content items."
+---
+
 # Manage Editorial Content
 
 ## Profile

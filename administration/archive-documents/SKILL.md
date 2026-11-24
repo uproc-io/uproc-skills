@@ -1,3 +1,8 @@
+---
+name: "archive-documents"
+description: "Manage the document archiving folders: review what has been archived, detect failed or unarchived documents, and upload new files into the archive flow."
+---
+
 # Archive Documents
 
 ## Profile
