@@ -30,3 +30,10 @@ Items needing human review: technical debt, workarounds, pending decisions, scop
 - Status: `won't_do`
 
 
+
+- Date: 2026-11-24
+- Area: MCP Skills extension
+- Item: los `SKILL.md` del catálogo no llevan frontmatter YAML de Agent Skills (`name`, `description`).
+- Reason: el catálogo se escribió para lectura humana con `# Título` y secciones `Profile`/`Goal`; el servidor MCP sintetiza la cabecera al servir cada skill.
+- Impact: `skills/list` y `resources/read` funcionan, pero el frontmatter servido no es el del archivo en disco y los campos extra no se publican.
+- Status: `planned` (añadir frontmatter real al catálogo y dejar de sintetizarlo)
