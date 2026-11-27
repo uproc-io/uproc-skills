@@ -22,6 +22,9 @@ Review tickets and cases, prioritize them, and prepare next actions.
 
 - Read KPIs.
 - Read `tickets`, `cases`, `cases_by_status`, and `cases_by_type`.
+- Read `documents`, `checklist`, `tasks` and `events` per case (Document Ingest and case lifecycle).
+- Checklist: manual items and automatic completion from `document_type`.
+- Tasks/subtasks and SLA (`sla_due_at`, `escalation_level`).
 - Upload and webhook support.
 
 ## Use this skill when
@@ -51,7 +54,8 @@ Review tickets and cases, prioritize them, and prepare next actions.
 - Use `support.assign_ticket` when the worker needs to route a ticket to a specific support owner.
 - Use `support.reply_to_ticket` when the worker needs to log an agent reply inside the customer-care workflow.
 - Use `cases.create_case_note` when the worker needs to record a follow-up, escalation summary, or customer update inside the case workflow.
-- Use `cases.close_case` and `cases.reopen_case` when the worker needs to move an operational case into or out of closure.
+- Use `cases.checklist.list` and `cases.tasks.list` to review pending requirements and next actions before recommending a step.
+- Use `cases.close_case` (with `reason`) and `cases.reopen_case` when the worker needs to move an operational case into or out of closure. Closing requires all required checklist items complete and a resolution.
 
 ## Implementation via Uproc CLI
 
@@ -60,7 +64,8 @@ Review tickets and cases, prioritize them, and prepare next actions.
 - KPIs: `uproc applications module overview customer-care kpis` and `uproc applications module overview case-lifecycle kpis`.
 - Open a new ticket with `uproc applications support create-ticket <item_json>`.
 - Route and respond with `uproc applications support assign-ticket <ticket_id> <assignee>`, `uproc applications support reply-ticket <ticket_id> <message>`, `uproc applications support mark-resolved <ticket_id>`, `uproc applications support close-ticket <ticket_id>`, and `uproc applications support reopen-ticket <ticket_id>`.
-- Manage cases with `uproc applications cases add-note <case_id> <content> [created_by]`, `uproc applications cases close <case_id>`, and `uproc applications cases reopen <case_id>`.
+- Manage cases with `uproc applications cases add-note <case_id> <content> [created_by]`, `uproc applications cases close <case_id> [reason]`, and `uproc applications cases reopen <case_id>`.
+- Checklist, task completion and SLA follow-up are currently panel-first; use the MCP reads above to inspect them before deciding the next action.
 
 ## Output
 
