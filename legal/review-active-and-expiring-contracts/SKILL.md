@@ -20,19 +20,22 @@ Review contracts, identify upcoming expirations, and prepare the next action.
 ## Backend capabilities
 
 - Read KPIs.
-- Read `contracts`, `expiring_contracts`, and `contracts_by_counterparty`.
-- Upload and webhook support.
+- Read `contracts`, `expiring_contracts`, `contracts_by_counterparty`, `renewals`, `parties`, `documents`, and `events`.
+- Document Ingest extraction (type/fields) and version diffs.
+- Import, addenda/versions, renewals/notice window, forms, generation, approval and signing links.
 
 ## Use this skill when
 
 - You need a contract status overview.
-- You want to spot contracts close to expiry.
+- You want to spot contracts close to expiry or in the notice window.
+- You need to review an addendum or version change.
 
 ## What it should do
 
 - Summarize active and expiring contracts.
 - Group by counterparty when useful.
 - Highlight contracts requiring renewal, review, or escalation.
+- Check parties, document versions and the latest extracted fields before recommending an action.
 
 ## Implementation via Uproc MCP
 
@@ -40,18 +43,23 @@ Review contracts, identify upcoming expirations, and prepare the next action.
   - `contracts.contracts.list`
   - `contracts.expiring_contracts.list`
   - `contracts.contracts_by_counterparty.list`
+  - `contracts.renewals.list`
+  - `contracts.parties.list`
+  - `contracts.documents.list`
+  - `contracts.events.list`
 - Use `module.kpis` for `contracts` when the worker wants a broad contract overview.
 - Use `contracts.update_contract` when the worker is ready to apply the agreed renewal or status updates to a contract.
 - Use `contracts.upload_contract_document` when a new contract version, annex, or supporting document must be attached to the contract record.
 - Use `contracts.renew_contract` when the worker is ready to execute the contract renewal flow directly.
 - Use `contracts.terminate_contract` when the worker is ready to end the contract and record that state explicitly.
+- Generation, approval and signing are panel-first (their actions are not exposed as MCP tools yet).
 
 ## Implementation via Uproc CLI
 
 - Read contracts with `uproc applications contracts list [--page 1]`, `uproc applications contracts list-expiring [--page 1]`, and `uproc applications contracts list-by-counterparty [--page 1]`.
 - KPIs: `uproc applications module overview contract-lifecycle kpis`.
 - Act on contracts with `uproc applications contracts update <contract_id> <data_json>`, `uproc applications contracts renew <contract_id>`, and `uproc applications contracts terminate <contract_id>`.
-- Limit: `contracts.upload_contract_document` has no CLI command and is MCP-only (or web UI).
+- Limit: `contracts.upload_contract_document` has no CLI command and is MCP-only (or web UI); generation, approval and signing are panel-first.
 
 ## Output
 
